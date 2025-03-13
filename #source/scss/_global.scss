@@ -1,0 +1,30 @@
+@media(min-width:1500px) {
+    .container {
+        max-width: 1484px
+    }
+}
+
+$main-green: #51801A;
+$main-red: #82252F;
+
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+input {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main.main {
+
+    &>section,
+    &>div {
+        &:last-child {
+            padding-bottom: 90px;
+        }
+    }
+}
