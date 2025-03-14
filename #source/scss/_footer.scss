@@ -60,8 +60,60 @@ footer.footer {
 }
 
 .footer__botttext {
-   margin: 11px 0 0 0;
-   font-size: 12px;
-   font-weight: 500;
-   color: #000;
+    margin: 11px 0 0 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+}
+
+.footer__list ul li a {
+    transition: 0.3s;
+}
+
+.footer__list ul li a:hover {
+    color: #51801A;
+}
+
+@media(max-width:1199.8px) {
+    .footer__list {
+        padding-left: 30px;
+    }
+}
+
+@media(max-width:991.8px) {
+    .footer__list {
+        padding-left: 0;
+    }
+
+    .footer__botttext {
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .footer__logo {
+        margin-bottom: 20px;
+    }
+
+    .paymethods {
+        margin-bottom: 20px;
+    }
+
+    .footer__list {
+        margin-bottom: 20px;
+    }
+
+    .footer__list ul li:last-child {
+        margin-bottom: 8px;
+    }
+
+    .footer__botttext {
+        margin-top: 15px;
+    }
+
+    footer.footer {
+        padding-bottom: 20px;
+    }
+
+    
 }

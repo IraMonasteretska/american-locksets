@@ -267,7 +267,7 @@
     height: 533px;
     padding-top: 77px;
     position: relative;
-   
+
     &::after {
         content: '';
         display: block;
@@ -318,4 +318,247 @@
             background: #82252F;
         }
     }
+}
+
+.headerr__cart {
+    margin-right: 0 !important;
+}
+
+@media(max-width:1399.8px) {
+    .maincat__item {
+        height: 160px;
+        margin-bottom: 20px;
+    }
+
+    .infosection__right .infosection__item {
+        padding: 20px;
+
+        img {
+            margin-bottom: 10px;
+        }
+    }
+
+    .mainpcategory__item {
+        padding: 5px 55px 5px 60px;
+    }
+
+    .mainpcategory__item .item-icon {
+        left: 25px;
+    }
+
+
+
+
+
+    .showbybrand h3 {
+        margin-bottom: 30px;
+    }
+
+    .infosection h2 {
+        margin-bottom: 20px;
+    }
+
+    .infosection h2 {
+        font-size: 28px;
+    }
+
+    .maincat__item .title {
+        font-size: 18px;
+    }
+
+    .mainpcategory__item h5 {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:1199.8px) {
+    .infosection__right .infosection__item:first-child {
+        max-width: calc(46% - 5px);
+        flex: 0 0 calc(46% - 5px);
+    }
+
+    .infosection__right .infosection__item:nth-child(2) {
+        max-width: calc(54% - 5px);
+        flex: 0 0 calc(54% - 5px);
+    }
+
+    .infosection__right .infosection__item img {
+        height: 40px;
+    }
+
+    .brand__item {
+        max-width: 18%;
+        flex: 0 0 18%;
+        height: 100px;
+    }
+
+    .showbybrand {
+        padding-bottom: 20px;
+    }
+
+    main.main>div:last-child,
+    main.main>section:last-child {
+        padding-bottom: 60px;
+    }
+
+    .headerr__cart {
+        margin-right: 32px !important;
+    }
+
+
+
+
+
+}
+
+@media(max-width:991.8px) {
+    .mainbnr {
+        height: 400px;
+    }
+
+    .maincatsect {
+        margin-top: -110px;
+    }
+
+    .maincat__item .title {
+        margin-bottom: 0;
+    }
+
+    .showbybrand .brands__wrapper,
+    .showbybrand .brands__btn {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .showbybrand .brands__btn a {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .brands__wrapper {
+        margin-bottom: 15px;
+    }
+
+    .brand__item {
+        max-width: 20%;
+        flex: 0 0 20%;
+    }
+
+
+
+
+
+
+
+    .infosection__left {
+        margin-bottom: 25px;
+    }
+
+    .showbybrand h3 {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media(max-width:767.8px) {
+
+    .maincat__item {
+        height: 135px;
+    }
+
+    .mainpcategory__item .arrow {
+        right: 15px;
+    }
+
+    .mainpcategory__item .item-icon {
+        left: 20px;
+    }
+
+    .mainpcategory__item {
+        padding: 5px 35px 5px 50px;
+        margin-bottom: 15px;
+    }
+
+    .mainpcategory__item h5 {
+        font-size: 15px;
+    }
+
+
+
+
+
+}
+
+@media(max-width:575.8px) {
+    .mainbnr {
+        padding-top: 50px;
+        height: 300px;
+    }
+
+    .mainbnr h1 {
+        font-size: 24px;
+    }
+
+    .maincatsect {
+        margin-top: -80px;
+    }
+
+    .maincat__item img {
+        max-height: 80px;
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .infosection {
+        padding: 30px 15px;
+    }
+
+    .infosection__right .infosection__item:first-child,
+    .infosection__right .infosection__item:nth-child(2) {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .infosection__right .infosection__item {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .infosection-wrap {
+        padding-bottom: 20px;
+    }
+
+    .showbybrand .brands__wrapper {
+        padding-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brand__item {
+        max-width: 33.333%;
+        flex: 0 0 33.333%;
+    }
+
+    .mainpcategory__item {
+        height: 60px;
+    }
+
+    .mainpcategory__item {
+        padding: 5px 35px 5px 55px;
+    }
+
+
+    .infosection h2 {
+        margin-bottom: 15px;
+    }
+
+    .infosection h2 {
+        font-size: 24px;
+    }
+
 }

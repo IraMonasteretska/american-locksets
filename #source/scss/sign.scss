@@ -1,0 +1,110 @@
+.signsection {
+    padding: 20px 0 80px 0;
+}
+
+.signbox {
+    margin: 0 auto;
+    max-width: 475px;
+    width: 100%;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 8px;
+        color: #82252F;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    p {
+        margin-bottom: 28px;
+        color: #3A2C2A;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.sign__tabs {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+
+        li {
+            margin-right: 32px;
+            display: inline-block;
+            vertical-align: middle;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            button {
+                padding: 0;
+                border: none;
+                outline: none;
+                background: transparent;
+                color: #7A6E6D;
+                transition: 0.3s;
+                font-size: 20px;
+                font-weight: 700;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    height: 1px;
+                    width: 0;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    bottom: -8px;
+                    background: $main-green;
+                }
+
+                &.active {
+                    color: #51801A;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &:hover {
+                    color: #3A2C2A;
+                }
+            }
+        }
+    }
+}
+
+.sign__tabscontent {
+    text-align: left;
+    padding-top: 24px;
+}
+
+.sign__tab {
+    .inputfield {
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3A2C2A;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        input {
+            width: 100%;
+            height: 53px;
+            border-radius: 5px;
+            padding: 0 12px;
+            font-size: 14px;
+            border: 1px solid #CECBCB;
+
+            &::placeholder {
+                color: #968F8E;
+            }
+        }
+    }
+}

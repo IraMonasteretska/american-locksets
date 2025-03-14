@@ -10,19 +10,30 @@ $(document).ready(function () {
         $this.find('i').text(newText);
     });
 
+    $('.header__nav li a').click(function (e) {
+        e.preventDefault();
 
-    $('.header__nav li.category').click(function () {
-        $(this).toggleClass('active');
-        $('.categories-menu').toggleClass('show');
+        let $this = $(this);
+        let $menu = $this.next('.sbmenu');
 
-        if ($('.overlay').length === 0) {
-            $('body').append('<div class="overlay"></div>'); // Додаємо затемнення
-            $('.overlay').hide().fadeIn(300); // Плавне появлення
-        } else {
-            $('.overlay').fadeOut(300, function () {
-                $(this).remove(); // Видаляємо після завершення анімації
-            });
+        $this.toggleClass('active');
+        $menu.toggleClass('show');
+
+        $('.sbmenu').not($menu).removeClass('show');
+        $('.header__nav li a').not($this).removeClass('active');
+
+
+        if ($(window).width() > 1199) {
+            if ($('.sbmenu.show').length > 0) {
+                if (!$('.overlay').hasClass('show')) {
+                    $('.overlay').addClass('show');
+                }
+            } else {
+                $('.overlay').removeClass('show');
+            }
         }
+
+
     });
 
     // menu tabs
@@ -51,5 +62,34 @@ $(document).ready(function () {
             disableOnInteraction: false,
             speed: 500,
         },
+    });
+
+    // burger
+    if ($('.burger2').length) {
+        (function () {
+            var burger2;
+            burger2 = document.querySelector(".burger2");
+            burger2.addEventListener("click", function () {
+                return burger2.classList.toggle("on");
+            });
+
+        }).call(this);
+    }
+
+    $('.burger').click(function () {
+        $('.adaptmenu').toggleClass('show');
+        $('.header__bottsect').toggleClass('open');
+        $('.overlay').toggleClass('show');
+        $('header.header nav').slideToggle();
+    })
+
+    $('.burger').click(function () {
+        $('body').toggleClass('hidden');
+        $('.mobilemenu').toggleClass('show');
+        window.scrollTo(0, 0);
+    })
+
+    $('.searchbtn-mob').click(function () {
+        $('.header__search').fadeToggle();
     });
 })
