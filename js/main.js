@@ -92,4 +92,55 @@ $(document).ready(function () {
     $('.searchbtn-mob').click(function () {
         $('.header__search').fadeToggle();
     });
+
+    // // sign tabs
+    // const tabs = $(".sign__tabs button");
+    // const tabContents = $(".sign__tab");
+
+    // // Активуємо перший таб і його вміст за замовчуванням
+    // tabs.first().addClass("active");
+    // tabContents.hide().first().show();
+
+    // tabs.click(function () {
+    //     let index = $(this).parent().index(); // Отримуємо індекс кнопки
+
+    //     tabs.removeClass("active");
+    //     tabContents.hide();
+
+    //     $(this).addClass("active");
+    //     tabContents.eq(index).show();
+    // });
+
+    // next step
+    $('.signnext').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.signstep').hide();
+        $(this).parents('.signstep').next('.signstep').show();
+    })
+
+    $('.signback').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.signstep').hide();
+        $(this).parents('.signstep').prev('.signstep').show();
+    })
+
+    // style select
+    if ($('select').length) {
+        $('.styledselect').select2({
+            placeholder: "",
+            minimumResultsForSearch: Infinity,
+            dropdownParent: $('.selectwrapper')
+        });
+
+        // $('.styledselectmodal').select2({
+        //     placeholder: "",
+        //     minimumResultsForSearch: Infinity,
+        //     dropdownParent: $('.modal')
+        // });
+
+
+    }
+
+
+
 })

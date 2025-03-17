@@ -78,3 +78,35 @@ main.main {
         }
     }
 }
+
+.border-btn {
+    height: 43px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid $main-green;
+    background: #fff;
+    color: $main-green;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &:hover {
+        color: #fff;
+        background: #82252F;
+        border-color: #82252F;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
