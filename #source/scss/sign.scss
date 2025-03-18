@@ -265,7 +265,7 @@
 }
 
 .sign__tab {
-    display: none;
+    // display: none;
 }
 
 .sign__tab.active {
@@ -400,6 +400,126 @@
     }
 }
 
+.signsectwrapper {
+    padding: 10px 0 0 0;
+
+    .signsectcontainer {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .succes-img {
+        max-width: 577px;
+        margin-bottom: 17px;
+        width: 100%;
+    }
+
+    h1 {
+        color: #82252F;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    p {
+        color: #7A6E6D;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        a {
+            color: $main-green;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &.redlink {
+                color: $main-red;
+            }
+        }
+    }
+
+    .greenbtn {
+        max-width: 227px;
+        width: 100%;
+        margin-top: 28px;
+    }
+}
+
+.signsectcontainer.logoff {
+    padding-top: 20px;
+
+    .logoff-img {
+        height: 80px;
+        margin-bottom: 36px;
+    }
+}
+
+.signbox.signbox__forgotpass {
+    .fgpimg {
+        max-height: 80px;
+        margin-bottom: 36px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 600;
+        color: #7A6E6D;
+    }
+
+    .sign__tabscontent {
+        padding-top: 0;
+    }
+
+    .signnext {
+        img {
+            margin-right: 8px;
+            width: 24px;
+        }
+    }
+
+    .error-text {
+        font-size: 12px;
+        padding-left: 28px;
+        position: relative;
+        margin-top: 9px;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: -1px;
+            width: 20px;
+        }
+    }
+}
+
+.signsection {
+    position: relative;
+    overflow: hidden;
+}
+
+.signsectcontainer {
+    .greenbtn {
+        img {
+            width: 24px;
+            margin-right: 8px;
+        }
+    }
+}
+
+@media(max-width:767.8px) {
+    .signsectwrapper h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .signsectwrapper p {
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+}
 
 @media(max-width:575.8px) {
     .signbox h1 {
@@ -445,5 +565,48 @@
 
     .signbox .signsubtitle {
         font-size: 16px;
+    }
+
+    .signsectwrapper h1 {
+        font-size: 24px;
+    }
+
+    .signsectwrapper .greenbtn {
+        margin-top: 15px;
+    }
+
+    .signsectcontainer.logoff .logoff-img {
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .signbox.signbox__forgotpass .fgpimg {
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .signbox.signbox__forgotpass .signnext {
+        text-align: center;
+    }
+
+}
+
+@media(max-width:360.8px) {
+
+    .signnext,
+    .signsubmit {
+        font-size: 14px;
+    }
+
+    .signbox.signbox__forgotpass .signnext img {
+        margin-right: 4px;
+    }
+
+    .signsectcontainer {
+        .greenbtn {
+            img {
+                margin-right: 4px;
+            }
+        }
     }
 }
