@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot password</title>
+    <title>Forgot password (error)</title>
     <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
 
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
@@ -1371,9 +1371,13 @@
                     <div class="sign__tabscontent">
                         <div class="sign__tab">
                             <form action="#">
-                                <div class="inputfield">
+                                <div class="inputfield error">
                                     <label for="email">E-Mail Address</label>
                                     <input type="email" placeholder="hello@mail.com" id="email">
+                                    <p class="error-text">
+                                        <img src="img/sign/warning-icon.png" alt="img">
+                                        Error: The E-Mail Address was not found in our records, please try again.
+                                    </p>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 col-5">
@@ -1389,12 +1393,12 @@
                                         </a>
                                     </div>
                                 </div>
-                               
+
                             </form>
                         </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer class="footer">
