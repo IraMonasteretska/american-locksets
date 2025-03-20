@@ -10,7 +10,7 @@
 
     .col-xl-3 {
         margin-bottom: 60px;
-    
+
         &:nth-child(4n) {
             .category-item {
                 border: none;
@@ -80,7 +80,7 @@
         font-weight: 700;
     }
 
-    .col-lg-6 {
+    .col-md-6 {
         border-bottom: 1px solid #CECBCB;
         margin-bottom: 40px;
     }
@@ -144,4 +144,190 @@
             }
         }
     }
+}
+
+
+.subcategory {
+    padding: 10px 0 0 0;
+
+    h1 {
+        margin-bottom: 30px;
+        color: #3A2C2A;
+        font-size: 26px;
+        font-weight: 800;
+    }
+}
+
+.subcategory-item {
+    display: block;
+    position: relative;
+    border-right: 1px solid #E9E9E9;
+    text-align: center;
+    padding: 0 20px 7px 20px;
+    margin-bottom: 48px;
+
+    .imgwrap {
+        height: 376px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 8px;
+        max-width: 246px;
+        margin: 0 auto;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: $main-green;
+        transition: 0.3s;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 0;
+            background: $main-red;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transition: 0.3s;
+        }
+    }
+
+    &:hover {
+        p {
+            color: $main-red;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
+@media(max-width:1399.8px) {
+
+    .subcategory-item .imgwrap {
+        height: 350px;
+    }
+
+}
+
+@media(max-width:1199.8px) {
+
+    .closersbybrands .closersbybrands__item .closersbybrands__item-logo,
+    .closersbybrands .closersbybrands__item .closersbybrands__item-descr {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .closersbybrands .closersbybrands__item .closersbybrands__item-logo {
+        margin-bottom: 15px;
+
+        img {
+            max-width: 220px;
+        }
+    }
+
+    .subcategory-item .imgwrap {
+        margin-bottom: 15px;
+    }
+
+}
+
+@media(max-width:991.8px) {
+    .subcategory-item {
+        margin-bottom: 30px;
+    }
+
+    .subcategory-item p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:767.8px) {
+    .category-item {
+        border-right: none;
+        border-bottom: 1px solid #E9E9E9 !important;
+        padding: 0 0 30px 0;
+    }
+
+    .category-section .col-xl-3 {
+        margin-bottom: 30px;
+    }
+
+    .closersbybrands .closersbybrands__item:after {
+        display: none;
+    }
+
+    .closersbybrands .itemwrap {
+        padding-bottom: 30px;
+    }
+
+    .closersbybrands .col-md-6 {
+        margin-bottom: 30px;
+    }
+
+    .closersbybrands .col-md-6:last-child {
+        border-bottom: none;
+    }
+
+    .subcategory-item .imgwrap {
+        max-height: 300px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .category-item h5 {
+        margin-bottom: 8px;
+    }
+
+    .category-item .imgwrap {
+        margin: 15px 0;
+    }
+
+    .closersbybrands .closersbybrands__item .closersbybrands__item-descr {
+        padding: 0;
+    }
+
+    .closersbybrands .closersbybrands__item .closersbybrands__item-descr p {
+        font-size: 14px;
+    }
+
+    .closersbybrands .closersbybrands__item .closersbybrands__item-descr h6 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .closersbybrands .closersbybrands__item {
+        text-align: center;
+    }
+
+    .closersbybrands .closersbybrands__item .closersbybrands__item-logo {
+        margin-bottom: 5px;
+    }
+
+    .closersbybrands .closersbybrands__item .closersbybrands__item-descr a {
+        display: inline-flex;
+    }
+
+    .closersbybrands .closersbybrands__item .closersbybrands__item-descr p {
+        margin-bottom: 15px;
+    }
+
+    .closersbybrands .col-md-6:last-child {
+        margin-bottom: 0;
+    }
+
 }
