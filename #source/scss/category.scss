@@ -19,9 +19,10 @@
     }
 }
 
+
 .category-item {
     height: 100%;
-    padding: 20px 28px 18px 28px;
+    padding: 20px 25px 18px 25px;
     display: block;
     border-right: 1px solid #E9E9E9;
 
@@ -330,4 +331,19 @@
         margin-bottom: 0;
     }
 
+    .subcategory-item {
+        border-right: none;
+        border-bottom: 1px solid #E9E9E9;
+        padding-bottom: 20px;
+    }
+
+    .subcategory-item .imgwrap {
+        max-height: 280px;
+    }
+
+    .col-sm-6:last-child {
+        .subcategory-item {
+            border-bottom: none;
+        }
+    }
 }
