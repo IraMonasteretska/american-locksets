@@ -124,9 +124,9 @@ $(document).ready(function () {
         $(this).parents('.signstep').prev('.signstep').show();
     })
 
-    // style select
+    // styled select
     if ($('select').length) {
-        $('.styledselect').select2({
+        $('.signsection .styledselect').select2({
             placeholder: "",
             minimumResultsForSearch: Infinity,
             dropdownParent: $('.selectwrapper')
@@ -142,5 +142,43 @@ $(document).ready(function () {
     }
 
 
+    // product page
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 12,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+        speed: 700,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 12,
+        speed: 700,
+        navigation: {
+            nextEl: ".swiper-button-next.prarr",
+            prevEl: ".swiper-button-prev.prarr",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+
+    // tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+    // styled selects
+    if ($('select').length) {
+        $('.selectwrapper .styledselect').select2({
+            placeholder: "",
+            minimumResultsForSearch: Infinity,
+            // dropdownParent: $('.selectwrapper')
+        });
+
+       
+
+
+    }
 
 })

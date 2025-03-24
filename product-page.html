@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product list page</title>
+    <title>Product page</title>
     <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
 
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/lib/select2.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,11 +23,6 @@
                         <p>Trusted Since 2001</p>
                     </div>
                     <div class="col-xl-8 col-sm-6 col-9 text-center">
-                        <!-- <ul>
-                            <li>FREE SHIPPING ON ALL ORDERS $300 AND UP</li>
-                            <li>Same Day Shipping</li>
-                            <li>Expedited delivery available</li>
-                        </ul> -->
                         <div class="swiper fliptext">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -1361,275 +1357,306 @@
                     <li><a href="#">Door Closers</a></li>
                     <li><a href="#">Standard Door Closers</a></li>
                     <li><a href="#">Stanley Door Closers</a></li>
-                    <li>Stanley D Series Closers - Grade 1</li>
+                    <li><a href="#">Stanley D Series Closers - Grade 1</a></li>
+                    <li>D-1610H</li>
                 </ul>
             </div>
         </div>
-        <section class="category-section category-section__pr">
+
+        <section class="product-section">
             <div class="container">
-                <h1>Stanley D Series Closers - Grade 1</h1>
-                <div class="product-listwrapper">
-                    <p class="displaying-items">Displaying 1 to 7 (of 7 products)</p>
-                    <div class="row g-0">
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="prodlist__item">
-                                <a href="#" class="imgwrap">
-                                    <img src="img/productlist/pr1.png" alt="img">
-                                </a>
-                                <div class="description">
-                                    <div class="topinf">
-                                        <a href="#" class="title">
-                                            Stanley D-1610H Multi-Sized 2-5 Door Closer with Standard Hold Open Arm,
-                                            Regular
-                                            / Top Jamb
-                                        </a>
-                                        <p class="model">Model: D-1610H</p>
-                                    </div>
-                                    <div class="bottinf">
-                                        <div class="price">
-                                            <p class="oldprice">$255.00 </p>
-                                            <p>$130.05  </p>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="about-tab" data-bs-toggle="tab"
+                            data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane"
+                            aria-selected="true">About product</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="details-tab" data-bs-toggle="tab"
+                            data-bs-target="#details-tab-pane" type="button" role="tab" aria-controls="details-tab-pane"
+                            aria-selected="false">Product Details</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="specification-tab" data-bs-toggle="tab"
+                            data-bs-target="#specification-tab-pane" type="button" role="tab"
+                            aria-controls="specification-tab-pane" aria-selected="false">Specification</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="related-tab" data-bs-toggle="tab"
+                            data-bs-target="#related-tab-pane" type="button" role="tab" aria-controls="related-tab-pane"
+                            aria-selected="false">Related Categories</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="specification-tab" data-bs-toggle="tab"
+                            data-bs-target="#review-tab-pane" type="button" role="tab" aria-controls="review-tab-pane"
+                            aria-selected="false">Reviews</button>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <!-- -------------1------------ -->
+                    <div class="tab-pane fade show active" id="about-tab-pane" role="tabpanel"
+                        aria-labelledby="about-tab" tabindex="0">
+                        <div class="tabcontent">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="product-sliders">
+                                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                            class="swiper mySwiper2 productmain-slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/product/product-img1.png" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/product/product-img2.png" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/product/product-img3.png" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/product/product-img4.png" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/product/product-img5.png" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/product/product-img1.png" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/product/product-img2.png" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <a href="#" class="cartbtn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                viewBox="0 0 36 36" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M6.13231 4.5C8.10783 4.5 9.85234 5.78845 10.4333 7.67662L10.4944 7.875H28.5762C30.6063 7.875 32.177 9.65424 31.9252 11.6686L31.3325 16.4101C31.1417 17.9372 29.9418 19.1419 28.4154 19.3388L13.4031 21.2759C13.2251 21.5437 13.0044 21.7872 12.7443 21.9953C12.0687 22.5357 12.4509 23.625 13.3159 23.625H28.875C29.4963 23.625 30 24.1287 30 24.75C30 25.3713 29.4963 25.875 28.875 25.875H13.3159C10.324 25.875 9.0024 22.1074 11.3387 20.2383C11.632 20.0037 11.7522 19.6136 11.6417 19.2546L8.28281 8.33831C7.99232 7.39422 7.12008 6.75 6.13231 6.75H4.125C3.50368 6.75 3 6.24632 3 5.625C3 5.00368 3.50368 4.5 4.125 4.5H6.13231ZM13.879 18.9458L28.1276 17.1073C28.6363 17.0416 29.0362 16.6401 29.0999 16.131L29.6925 11.3895C29.7765 10.7181 29.2529 10.125 28.5762 10.125H11.1866L13.7922 18.593C13.8281 18.7098 13.857 18.8275 13.879 18.9458Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M9.75 29.25C9.75 28.0073 10.7574 27 12 27C13.2427 27 14.25 28.0073 14.25 29.25C14.25 30.4927 13.2427 31.5 12 31.5C10.7574 31.5 9.75 30.4927 9.75 29.25Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M25.5 27C24.2573 27 23.25 28.0073 23.25 29.25C23.25 30.4927 24.2573 31.5 25.5 31.5C26.7427 31.5 27.75 30.4927 27.75 29.25C27.75 28.0073 26.7427 27 25.5 27Z"
-                                                    fill="#51801A" />
-                                            </svg>
-                                        </a>
+                                        <div class="thumbwrap">
+                                            <div thumbsSlider="" class="swiper mySwiper productsub-slider">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="imgwrap">
+                                                            <img src="img/product/product-sm1.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="imgwrap">
+                                                            <img src="img/product/product-sm2.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="imgwrap">
+                                                            <img src="img/product/product-sm3.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="imgwrap">
+                                                            <img src="img/product/product-sm4.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="imgwrap">
+                                                            <img src="img/product/product-sm5.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="imgwrap">
+                                                            <img src="img/product/product-sm1.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="imgwrap">
+                                                            <img src="img/product/product-sm2.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next prarr">
+                                                <img src="img/product/prod-arrright.svg" alt="naxt">
+                                            </div>
+                                            <div class="swiper-button-prev prarr">
+                                                <img src="img/product/prod-arrleft.svg" alt="prev">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-productdetails">
+                                        <p class="title">Product Details</p>
+                                        <ul class="prdetlist">
+                                            <li>
+                                                <span>Knobs:</span>
+                                                <p>1) ELI - Elite, 2) HAN - Hana</p>
+                                            </li>
+                                            <li>
+                                                <span>Finishes:</span>
+                                                <p>
+                                                    Bright brass 605, Satin brass 606, Satin bronze 612, Oil rubbed
+                                                    bronze 613, Bright chrome 625, Satin chrome 626
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <span>Door Thickness:</span>
+                                                <p>1-3/8" to to 1-3/4" standard.</p>
+                                            </li>
+                                            <li>
+                                                <span>Backset:</span>
+                                                <p>
+                                                    2-3/4" standard; 2-3/8" also available.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <span>Handing:</span>
+                                                <p>Locks are non-handed.</p>
+                                            </li>
+                                            <li>
+                                                <span>ANSI/BHMA:</span>
+                                                <p>
+                                                    Meets ANSI/BHMA A156.2, Series 4000, Grade 2.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <button class="more-prdetails">
+                                            More details
+                                        </button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="prodlist__item">
-                                <a href="#" class="imgwrap">
-                                    <img src="img/productlist/pr1.png" alt="img">
-                                </a>
-                                <div class="description">
-                                    <div class="topinf">
-                                        <a href="#" class="title">
-                                            Stanley D-1611-695 Multi-Sized 1-4 Door Closer with Tri-Pack Arm, DARK
-                                            BRONZE PAINTED
-                                        </a>
-                                        <p class="model">Model: D-1611</p>
-                                    </div>
-                                    <div class="bottinf">
-                                        <div class="price">
-                                            <p class="oldprice">$204.00</p>
-                                            <p>$104.04</p>
+                                <div class="col-xl-5 offset-xl-1">
+                                    <div class="product-info">
+                                        <h1>Falcon W581LD, Grade 2 Storeroom Lock, Less Cylinder</h1>
+                                        <div class="product-status">
+                                            <div class="status">
+                                                <p>Model: W581LD</p>
+                                                <span>In Stock</span>
+                                            </div>
+                                            <div class="pr-brand">
+                                                <img src="img/product/brand.png" alt="img">
+                                            </div>
                                         </div>
-                                        <a href="#" class="cartbtn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                viewBox="0 0 36 36" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M6.13231 4.5C8.10783 4.5 9.85234 5.78845 10.4333 7.67662L10.4944 7.875H28.5762C30.6063 7.875 32.177 9.65424 31.9252 11.6686L31.3325 16.4101C31.1417 17.9372 29.9418 19.1419 28.4154 19.3388L13.4031 21.2759C13.2251 21.5437 13.0044 21.7872 12.7443 21.9953C12.0687 22.5357 12.4509 23.625 13.3159 23.625H28.875C29.4963 23.625 30 24.1287 30 24.75C30 25.3713 29.4963 25.875 28.875 25.875H13.3159C10.324 25.875 9.0024 22.1074 11.3387 20.2383C11.632 20.0037 11.7522 19.6136 11.6417 19.2546L8.28281 8.33831C7.99232 7.39422 7.12008 6.75 6.13231 6.75H4.125C3.50368 6.75 3 6.24632 3 5.625C3 5.00368 3.50368 4.5 4.125 4.5H6.13231ZM13.879 18.9458L28.1276 17.1073C28.6363 17.0416 29.0362 16.6401 29.0999 16.131L29.6925 11.3895C29.7765 10.7181 29.2529 10.125 28.5762 10.125H11.1866L13.7922 18.593C13.8281 18.7098 13.857 18.8275 13.879 18.9458Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M9.75 29.25C9.75 28.0073 10.7574 27 12 27C13.2427 27 14.25 28.0073 14.25 29.25C14.25 30.4927 13.2427 31.5 12 31.5C10.7574 31.5 9.75 30.4927 9.75 29.25Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M25.5 27C24.2573 27 23.25 28.0073 23.25 29.25C23.25 30.4927 24.2573 31.5 25.5 31.5C26.7427 31.5 27.75 30.4927 27.75 29.25C27.75 28.0073 26.7427 27 25.5 27Z"
-                                                    fill="#51801A" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="prodlist__item">
-                                <a href="#" class="imgwrap">
-                                    <img src="img/productlist/pr1.png" alt="img">
-                                </a>
-                                <div class="description">
-                                    <div class="topinf">
-                                        <a href="#" class="title">
-                                            Stanley D-1611H- Multi-Sized 1-4 Door Closer with Standard Hold Open Arm
-                                        </a>
-                                        <p class="model">Model: D-1611H</p>
-                                    </div>
-                                    <div class="bottinf">
-                                        <div class="price">
-                                            <p class="oldprice">$255.00</p>
-                                            <p>$130.05</p>
+                                        <div class="scrollitem">
+                                            <div class="productchoose">
+                                                <div class="product-selectwrap">
+                                                    <div class="product-selectwrap__header">
+                                                        <p>Knob:</p>
+                                                        <span data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            data-bs-custom-class="custom-tooltip"
+                                                            data-bs-title="This top tooltip is themed via CSS variables.">What
+                                                            is this?</span>
+                                                    </div>
+                                                    <div class="selectwrapper">
+                                                        <select name="" id="" class="styledselect"
+                                                            data-placeholder="Please select">
+                                                            <option value=""></option>
+                                                            <option value="1">HAN - Hana Knob</option>
+                                                            <option value="2">HAN - Hana Knob</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="product-selectwrap">
+                                                    <div class="product-selectwrap__header">
+                                                        <p>Finish:</p>
+                                                        <span data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            data-bs-custom-class="custom-tooltip"
+                                                            data-bs-title="This top tooltip is themed via CSS variables.">What
+                                                            is this?</span>
+                                                    </div>
+                                                    <div class="selectwrapper">
+                                                        <select name="" id="" class="styledselect"
+                                                            data-placeholder="Please select">
+                                                            <option value=""></option>
+                                                            <option value="1">626 - Satin Chrome</option>
+                                                            <option value="2">626 - Satin Chrome</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="product-selectwrap">
+                                                    <div class="product-selectwrap__header">
+                                                        <p>Backset:</p>
+                                                        <span data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            data-bs-custom-class="custom-tooltip"
+                                                            data-bs-title="This top tooltip is themed via CSS variables.">What
+                                                            is this?</span>
+                                                    </div>
+                                                    <div class="selectwrapper">
+                                                        <select name="" id="" class="styledselect"
+                                                            data-placeholder="Please select">
+                                                            <option value=""></option>
+                                                            <option value="1">2 - 3/4” Backset</option>
+                                                            <option value="2">2 - 3/4” Backset</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="product-selectwrap">
+                                                    <div class="product-selectwrap__header">
+                                                        <p>Strike:</p>
+                                                        <span data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            data-bs-custom-class="custom-tooltip"
+                                                            data-bs-title="This top tooltip is themed via CSS variables.">What
+                                                            is this?</span>
+                                                    </div>
+                                                    <div class="selectwrapper">
+                                                        <select name="" id="" class="styledselect"
+                                                            data-placeholder="Please select">
+                                                            <option value=""></option>
+                                                            <option value="1">ANSI Strike - 4-7/8”</option>
+                                                            <option value="2">ANSI Strike - 4-7/8”</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="product-selectwrap">
+                                                    <div class="product-selectwrap__header">
+                                                        <p>Keying:</p>
+                                                        <span data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            data-bs-custom-class="custom-tooltip"
+                                                            data-bs-title="This top tooltip is themed via CSS variables.">What
+                                                            is this?</span>
+                                                    </div>
+                                                    <div class="selectwrapper">
+                                                        <select name="" id="" class="styledselect"
+                                                            data-placeholder="Please select">
+                                                            <option value=""></option>
+                                                            <option value="1">Standard</option>
+                                                            <option value="2">Standard</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+    
+    
+                                            </div>
                                         </div>
-                                        <a href="#" class="cartbtn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                viewBox="0 0 36 36" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M6.13231 4.5C8.10783 4.5 9.85234 5.78845 10.4333 7.67662L10.4944 7.875H28.5762C30.6063 7.875 32.177 9.65424 31.9252 11.6686L31.3325 16.4101C31.1417 17.9372 29.9418 19.1419 28.4154 19.3388L13.4031 21.2759C13.2251 21.5437 13.0044 21.7872 12.7443 21.9953C12.0687 22.5357 12.4509 23.625 13.3159 23.625H28.875C29.4963 23.625 30 24.1287 30 24.75C30 25.3713 29.4963 25.875 28.875 25.875H13.3159C10.324 25.875 9.0024 22.1074 11.3387 20.2383C11.632 20.0037 11.7522 19.6136 11.6417 19.2546L8.28281 8.33831C7.99232 7.39422 7.12008 6.75 6.13231 6.75H4.125C3.50368 6.75 3 6.24632 3 5.625C3 5.00368 3.50368 4.5 4.125 4.5H6.13231ZM13.879 18.9458L28.1276 17.1073C28.6363 17.0416 29.0362 16.6401 29.0999 16.131L29.6925 11.3895C29.7765 10.7181 29.2529 10.125 28.5762 10.125H11.1866L13.7922 18.593C13.8281 18.7098 13.857 18.8275 13.879 18.9458Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M9.75 29.25C9.75 28.0073 10.7574 27 12 27C13.2427 27 14.25 28.0073 14.25 29.25C14.25 30.4927 13.2427 31.5 12 31.5C10.7574 31.5 9.75 30.4927 9.75 29.25Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M25.5 27C24.2573 27 23.25 28.0073 23.25 29.25C23.25 30.4927 24.2573 31.5 25.5 31.5C26.7427 31.5 27.75 30.4927 27.75 29.25C27.75 28.0073 26.7427 27 25.5 27Z"
-                                                    fill="#51801A" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="prodlist__item">
-                                <a href="#" class="imgwrap">
-                                    <img src="img/productlist/pr1.png" alt="img">
-                                </a>
-                                <div class="description">
-                                    <div class="topinf">
-                                        <a href="#" class="title">
-                                            Stanley D-1611PH Multi-Sized 1-4 Door Closer with Parallel Hold Open Arm
-                                        </a>
-                                        <p class="model">Model: D-1611PH</p>
-                                    </div>
-                                    <div class="bottinf">
-                                        <div class="price">
-                                            <p class="oldprice">$255.00</p>
-                                            <p>$130.05</p>
-                                        </div>
-                                        <a href="#" class="cartbtn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                viewBox="0 0 36 36" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M6.13231 4.5C8.10783 4.5 9.85234 5.78845 10.4333 7.67662L10.4944 7.875H28.5762C30.6063 7.875 32.177 9.65424 31.9252 11.6686L31.3325 16.4101C31.1417 17.9372 29.9418 19.1419 28.4154 19.3388L13.4031 21.2759C13.2251 21.5437 13.0044 21.7872 12.7443 21.9953C12.0687 22.5357 12.4509 23.625 13.3159 23.625H28.875C29.4963 23.625 30 24.1287 30 24.75C30 25.3713 29.4963 25.875 28.875 25.875H13.3159C10.324 25.875 9.0024 22.1074 11.3387 20.2383C11.632 20.0037 11.7522 19.6136 11.6417 19.2546L8.28281 8.33831C7.99232 7.39422 7.12008 6.75 6.13231 6.75H4.125C3.50368 6.75 3 6.24632 3 5.625C3 5.00368 3.50368 4.5 4.125 4.5H6.13231ZM13.879 18.9458L28.1276 17.1073C28.6363 17.0416 29.0362 16.6401 29.0999 16.131L29.6925 11.3895C29.7765 10.7181 29.2529 10.125 28.5762 10.125H11.1866L13.7922 18.593C13.8281 18.7098 13.857 18.8275 13.879 18.9458Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M9.75 29.25C9.75 28.0073 10.7574 27 12 27C13.2427 27 14.25 28.0073 14.25 29.25C14.25 30.4927 13.2427 31.5 12 31.5C10.7574 31.5 9.75 30.4927 9.75 29.25Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M25.5 27C24.2573 27 23.25 28.0073 23.25 29.25C23.25 30.4927 24.2573 31.5 25.5 31.5C26.7427 31.5 27.75 30.4927 27.75 29.25C27.75 28.0073 26.7427 27 25.5 27Z"
-                                                    fill="#51801A" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="prodlist__item">
-                                <a href="#" class="imgwrap">
-                                    <img src="img/productlist/pr2.png" alt="img">
-                                </a>
-                                <div class="description">
-                                    <div class="topinf">
-                                        <a href="#" class="title">
-                                            Stanley D-4551H-695 Multi-Sized 1-5 Door Closer with Standard Hold Open Arm
-                                            - DARK BRONZE PAINTE
-                                        </a>
-                                        <p class="model">Model: D-4551H</p>
-                                    </div>
-                                    <div class="bottinf">
-                                        <div class="price">
-                                            <p class="oldprice">$534.00</p>
-                                            <p>$283.02</p>
-                                        </div>
-                                        <a href="#" class="cartbtn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                viewBox="0 0 36 36" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M6.13231 4.5C8.10783 4.5 9.85234 5.78845 10.4333 7.67662L10.4944 7.875H28.5762C30.6063 7.875 32.177 9.65424 31.9252 11.6686L31.3325 16.4101C31.1417 17.9372 29.9418 19.1419 28.4154 19.3388L13.4031 21.2759C13.2251 21.5437 13.0044 21.7872 12.7443 21.9953C12.0687 22.5357 12.4509 23.625 13.3159 23.625H28.875C29.4963 23.625 30 24.1287 30 24.75C30 25.3713 29.4963 25.875 28.875 25.875H13.3159C10.324 25.875 9.0024 22.1074 11.3387 20.2383C11.632 20.0037 11.7522 19.6136 11.6417 19.2546L8.28281 8.33831C7.99232 7.39422 7.12008 6.75 6.13231 6.75H4.125C3.50368 6.75 3 6.24632 3 5.625C3 5.00368 3.50368 4.5 4.125 4.5H6.13231ZM13.879 18.9458L28.1276 17.1073C28.6363 17.0416 29.0362 16.6401 29.0999 16.131L29.6925 11.3895C29.7765 10.7181 29.2529 10.125 28.5762 10.125H11.1866L13.7922 18.593C13.8281 18.7098 13.857 18.8275 13.879 18.9458Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M9.75 29.25C9.75 28.0073 10.7574 27 12 27C13.2427 27 14.25 28.0073 14.25 29.25C14.25 30.4927 13.2427 31.5 12 31.5C10.7574 31.5 9.75 30.4927 9.75 29.25Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M25.5 27C24.2573 27 23.25 28.0073 23.25 29.25C23.25 30.4927 24.2573 31.5 25.5 31.5C26.7427 31.5 27.75 30.4927 27.75 29.25C27.75 28.0073 26.7427 27 25.5 27Z"
-                                                    fill="#51801A" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="prodlist__item">
-                                <a href="#" class="imgwrap">
-                                    <img src="img/productlist/pr2.png" alt="img">
-                                </a>
-                                <div class="description">
-                                    <div class="topinf">
-                                        <a href="#" class="title">
-                                            Stanley D-1610H Multi-Sized 2-5 Door Closer with Standard Hold Open Arm,
-                                            Regular / Top Jamb
-                                        </a>
-                                        <p class="model">Model: D-1610H</p>
-                                    </div>
-                                    <div class="bottinf">
-                                        <div class="price">
-                                            <p class="oldprice">$255.00</p>
-                                            <p>$130.05</p>
-                                        </div>
-                                        <a href="#" class="cartbtn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                viewBox="0 0 36 36" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M6.13231 4.5C8.10783 4.5 9.85234 5.78845 10.4333 7.67662L10.4944 7.875H28.5762C30.6063 7.875 32.177 9.65424 31.9252 11.6686L31.3325 16.4101C31.1417 17.9372 29.9418 19.1419 28.4154 19.3388L13.4031 21.2759C13.2251 21.5437 13.0044 21.7872 12.7443 21.9953C12.0687 22.5357 12.4509 23.625 13.3159 23.625H28.875C29.4963 23.625 30 24.1287 30 24.75C30 25.3713 29.4963 25.875 28.875 25.875H13.3159C10.324 25.875 9.0024 22.1074 11.3387 20.2383C11.632 20.0037 11.7522 19.6136 11.6417 19.2546L8.28281 8.33831C7.99232 7.39422 7.12008 6.75 6.13231 6.75H4.125C3.50368 6.75 3 6.24632 3 5.625C3 5.00368 3.50368 4.5 4.125 4.5H6.13231ZM13.879 18.9458L28.1276 17.1073C28.6363 17.0416 29.0362 16.6401 29.0999 16.131L29.6925 11.3895C29.7765 10.7181 29.2529 10.125 28.5762 10.125H11.1866L13.7922 18.593C13.8281 18.7098 13.857 18.8275 13.879 18.9458Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M9.75 29.25C9.75 28.0073 10.7574 27 12 27C13.2427 27 14.25 28.0073 14.25 29.25C14.25 30.4927 13.2427 31.5 12 31.5C10.7574 31.5 9.75 30.4927 9.75 29.25Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M25.5 27C24.2573 27 23.25 28.0073 23.25 29.25C23.25 30.4927 24.2573 31.5 25.5 31.5C26.7427 31.5 27.75 30.4927 27.75 29.25C27.75 28.0073 26.7427 27 25.5 27Z"
-                                                    fill="#51801A" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="prodlist__item">
-                                <a href="#" class="imgwrap">
-                                    <img src="img/productlist/pr2.png" alt="img">
-                                </a>
-                                <div class="description">
-                                    <div class="topinf">
-                                        <a href="#" class="title">
-                                            Stanley D-4551HS-695 Multi-Sized 1-5 Door Closer with Heavy Duty Arm w/ Hold
-                                            Open & Stop, DARK BRONZE PAINTED
-                                        </a>
-                                        <p class="model">Model: D-4551HS</p>
-                                    </div>
-                                    <div class="bottinf">
-                                        <div class="price">
-                                            <p class="oldprice">$646.00</p>
-                                            <p>$342.38</p>
-                                        </div>
-                                        <a href="#" class="cartbtn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                viewBox="0 0 36 36" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M6.13231 4.5C8.10783 4.5 9.85234 5.78845 10.4333 7.67662L10.4944 7.875H28.5762C30.6063 7.875 32.177 9.65424 31.9252 11.6686L31.3325 16.4101C31.1417 17.9372 29.9418 19.1419 28.4154 19.3388L13.4031 21.2759C13.2251 21.5437 13.0044 21.7872 12.7443 21.9953C12.0687 22.5357 12.4509 23.625 13.3159 23.625H28.875C29.4963 23.625 30 24.1287 30 24.75C30 25.3713 29.4963 25.875 28.875 25.875H13.3159C10.324 25.875 9.0024 22.1074 11.3387 20.2383C11.632 20.0037 11.7522 19.6136 11.6417 19.2546L8.28281 8.33831C7.99232 7.39422 7.12008 6.75 6.13231 6.75H4.125C3.50368 6.75 3 6.24632 3 5.625C3 5.00368 3.50368 4.5 4.125 4.5H6.13231ZM13.879 18.9458L28.1276 17.1073C28.6363 17.0416 29.0362 16.6401 29.0999 16.131L29.6925 11.3895C29.7765 10.7181 29.2529 10.125 28.5762 10.125H11.1866L13.7922 18.593C13.8281 18.7098 13.857 18.8275 13.879 18.9458Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M9.75 29.25C9.75 28.0073 10.7574 27 12 27C13.2427 27 14.25 28.0073 14.25 29.25C14.25 30.4927 13.2427 31.5 12 31.5C10.7574 31.5 9.75 30.4927 9.75 29.25Z"
-                                                    fill="#51801A" />
-                                                <path
-                                                    d="M25.5 27C24.2573 27 23.25 28.0073 23.25 29.25C23.25 30.4927 24.2573 31.5 25.5 31.5C26.7427 31.5 27.75 30.4927 27.75 29.25C27.75 28.0073 26.7427 27 25.5 27Z"
-                                                    fill="#51801A" />
-                                            </svg>
-                                        </a>
+                                        
+
+
+
+
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="displaying-items__bottom">
-                        <p class="displaying-items">Displaying 1 to 7 (of 7 products)</p>
-                        <p class="result-items">Result Pages: <b>1</b></p>
-                    </div>
+                    <!-- ------------------------- -->
+                    <div class="tab-pane fade" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab"
+                        tabindex="0">2</div>
+                    <div class="tab-pane fade" id="specification-tab-pane" role="tabpanel"
+                        aria-labelledby="specification-tab" tabindex="0">3</div>
+                    <div class="tab-pane fade" id="related-tab-pane" role="tabpanel" aria-labelledby="related-tab"
+                        tabindex="0">4</div>
+                    <div class="tab-pane fade" id="review-tab-pane" role="tabpanel" aria-labelledby="review-tab"
+                        tabindex="0">5</div>
                 </div>
             </div>
         </section>
+
 
     </main>
 
@@ -1717,6 +1744,9 @@
 
 <script src="js/lib/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/lib/popper.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/select2.js"></script>
 <script src="js/main.js"></script>
 
 </html>
