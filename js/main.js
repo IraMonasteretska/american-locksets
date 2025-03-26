@@ -230,7 +230,9 @@ $(document).ready(function () {
           },
     });
 
-
+    $('.addproductbox__btn .cartbtn').click(function(){
+        $(this).toggleClass('active');
+    });
 
 
 
