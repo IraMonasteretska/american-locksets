@@ -152,9 +152,9 @@ $(document).ready(function () {
         speed: 700,
         breakpoints: {
             768: {
-              slidesPerView: 5,
+                slidesPerView: 5,
             },
-          },
+        },
     });
     var swiper2 = new Swiper(".mySwiper2", {
         loop: true,
@@ -196,16 +196,16 @@ $(document).ready(function () {
         },
         breakpoints: {
             576: {
-              slidesPerView: 2,
-              spaceBetween: 20,
+                slidesPerView: 2,
+                spaceBetween: 20,
             },
             992: {
-              slidesPerView: 4,
+                slidesPerView: 4,
             },
             1400: {
-              slidesPerView: 5,
+                slidesPerView: 5,
             },
-          },
+        },
     });
 
     var swiper = new Swiper(".reviews-slider", {
@@ -222,19 +222,87 @@ $(document).ready(function () {
             prevEl: ".slider-arrowstop .swiper-button-prev",
         },
         breakpoints: {
-            
+
             992: {
-              slidesPerView: 2,
+                slidesPerView: 2,
             },
-           
-          },
+
+        },
     });
 
-    $('.addproductbox__btn .cartbtn').click(function(){
+    $('.addproductbox__btn .cartbtn').click(function () {
         $(this).toggleClass('active');
     });
 
+    // write review
+    $('.write-review__btn').click(function (e) {
+        e.preventDefault();
+        $('.product-reviewssect').addClass('hide');
+        $('.write-review').removeClass('hide');
+
+    });
+
+    document.querySelectorAll('.chooserating input[type="radio"]').forEach((radio, index, radios) => {
+        radio.addEventListener('change', () => {
+            radios.forEach((r, i) => {
+                r.parentElement.classList.toggle('filled', i <= index);
+            });
+        });
+    });
+
+    // remove disabled
+    const textarea = document.getElementById("review");
+    const ratingInputs = document.querySelectorAll(".chooserating__star input");
+    const submitButton = document.querySelector(".leavereview");
+
+    function checkForm() {
+        const isTextFilled = textarea.value.trim().length > 0;
+        const isRatingSelected = [...ratingInputs].some(input => input.checked);
+
+        if (isTextFilled && isRatingSelected) {
+            submitButton.classList.remove("disabled");
+        } else {
+            submitButton.classList.add("disabled");
+        }
+    }
+
+    textarea.addEventListener("input", checkForm);
+    ratingInputs.forEach(input => input.addEventListener("change", checkForm));
+
+    // review ty
+    $('.leavereview').click(function () {
+        $('.write-review').addClass('hide');
+        $('.review-ty').removeClass('hide');
+    })
+
+    // open tab btn
+    const tabOpenBtn = document.querySelector(".tabopenbtn"); 
+    const reviewTab = document.querySelector("#myTab button[data-bs-target='#review-tab-pane']");
+    const tabContainer = document.getElementById("myTab"); 
+    const moreDetailsBtn = document.querySelector(".more-prdetails"); 
+    const detailsTab = document.getElementById("details-tab"); 
+
+    if (tabOpenBtn && reviewTab && tabContainer) {
+        tabOpenBtn.addEventListener("click", function (event) {
+            event.preventDefault(); 
+
+            const tab = new bootstrap.Tab(reviewTab);
+            tab.show();
+
+            tabContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    }
+
+    if (moreDetailsBtn && detailsTab && tabContainer) {
+        moreDetailsBtn.addEventListener("click", function (event) {
+            event.preventDefault(); 
+
+            tabContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+
+            const tab = new bootstrap.Tab(detailsTab);
+            setTimeout(() => tab.show(), 300); 
+        });
+    }
 
 
-    
 })
