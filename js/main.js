@@ -251,58 +251,112 @@ $(document).ready(function () {
     });
 
     // remove disabled
-    const textarea = document.getElementById("review");
-    const ratingInputs = document.querySelectorAll(".chooserating__star input");
-    const submitButton = document.querySelector(".leavereview");
 
-    function checkForm() {
-        const isTextFilled = textarea.value.trim().length > 0;
-        const isRatingSelected = [...ratingInputs].some(input => input.checked);
+    if ($('#review').length) {
+        const textarea = document.getElementById("review");
+        const ratingInputs = document.querySelectorAll(".chooserating__star input");
+        const submitButton = document.querySelector(".leavereview");
 
-        if (isTextFilled && isRatingSelected) {
-            submitButton.classList.remove("disabled");
-        } else {
-            submitButton.classList.add("disabled");
+        function checkForm() {
+            const isTextFilled = textarea.value.trim().length > 0;
+            const isRatingSelected = [...ratingInputs].some(input => input.checked);
+
+            if (isTextFilled && isRatingSelected) {
+                submitButton.classList.remove("disabled");
+            } else {
+                submitButton.classList.add("disabled");
+            }
+        }
+
+        textarea.addEventListener("input", checkForm);
+        ratingInputs.forEach(input => input.addEventListener("change", checkForm));
+
+        // review ty
+        $('.leavereview').click(function () {
+            $('.write-review').addClass('hide');
+            $('.review-ty').removeClass('hide');
+        })
+
+        // open tab btn
+        const tabOpenBtn = document.querySelector(".tabopenbtn");
+        const reviewTab = document.querySelector("#myTab button[data-bs-target='#review-tab-pane']");
+        const tabContainer = document.getElementById("myTab");
+        const moreDetailsBtn = document.querySelector(".more-prdetails");
+        const detailsTab = document.getElementById("details-tab");
+
+        if (tabOpenBtn && reviewTab && tabContainer) {
+            tabOpenBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                const tab = new bootstrap.Tab(reviewTab);
+                tab.show();
+
+                tabContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+        }
+
+        if (moreDetailsBtn && detailsTab && tabContainer) {
+            moreDetailsBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                tabContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+
+                const tab = new bootstrap.Tab(detailsTab);
+                setTimeout(() => tab.show(), 300);
+            });
         }
     }
 
-    textarea.addEventListener("input", checkForm);
-    ratingInputs.forEach(input => input.addEventListener("change", checkForm));
+    // quote request
+    $('.areas-add').on('click', function () {
+        let index = $('.reqquote__area').length + 1; // Визначаємо новий індекс
 
-    // review ty
-    $('.leavereview').click(function () {
-        $('.write-review').addClass('hide');
-        $('.review-ty').removeClass('hide');
-    })
+        let newBlock = `
+            <div class="reqquote__area">
+                <div class="reqquote__item">
+                    <span>${index}</span>
+                </div>
+                <div class="reqquote__manufacturer">
+                    <input type="text">
+                </div>
+                <div class="reqquote__model">
+                    <input type="text">
+                </div>
+                <div class="reqquote__descr">
+                    <input type="text">
+                </div>
+                <div class="reqquote__finish">
+                    <input type="text">
+                </div>
+                <div class="reqquote__qty">
+                    <div class="selectwrapper">
+                        <select name="" id="sl${index}" class="styledselect" data-placeholder="Please select">
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        `;
 
-    // open tab btn
-    const tabOpenBtn = document.querySelector(".tabopenbtn"); 
-    const reviewTab = document.querySelector("#myTab button[data-bs-target='#review-tab-pane']");
-    const tabContainer = document.getElementById("myTab"); 
-    const moreDetailsBtn = document.querySelector(".more-prdetails"); 
-    const detailsTab = document.getElementById("details-tab"); 
+        $('.reqquote__areasgroup').append(newBlock);
 
-    if (tabOpenBtn && reviewTab && tabContainer) {
-        tabOpenBtn.addEventListener("click", function (event) {
-            event.preventDefault(); 
+        // Ініціалізуємо select2 для нового select, якщо існують селекти
+        if ($('select').length) {
+            $('.selectwrapper .styledselect').select2({
+                placeholder: "",
+                minimumResultsForSearch: Infinity,
+            });
+        }
+    });
 
-            const tab = new bootstrap.Tab(reviewTab);
-            tab.show();
-
-            tabContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    $('.clearform').on('click', function () {
+        $('input[type="text"], input[type="email"], input[type="number"], textarea').val('');
+        $('.styledselect').each(function () {
+            $(this).val($(this).find('option:first').val()).trigger('change');
         });
-    }
-
-    if (moreDetailsBtn && detailsTab && tabContainer) {
-        moreDetailsBtn.addEventListener("click", function (event) {
-            event.preventDefault(); 
-
-            tabContainer.scrollIntoView({ behavior: "smooth", block: "start" });
-
-            const tab = new bootstrap.Tab(detailsTab);
-            setTimeout(() => tab.show(), 300); 
-        });
-    }
+    });
 
 
 })

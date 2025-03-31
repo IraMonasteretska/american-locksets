@@ -1,0 +1,413 @@
+.reqquote-herosect {
+    position: relative;
+}
+
+.reqquote__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.breadcrums {
+    z-index: 2;
+    position: relative;
+}
+
+.reqquote__header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 90px;
+    margin-bottom: 55px;
+
+    h1 {
+        color: #F5F5F5;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    h6 {
+        color: #F5F5F5;
+        margin-bottom: 16px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    p {
+        color: #F5F5F5;
+        font-size: 12px;
+        font-weight: 700;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.reqquote__formwrapper {
+    padding: 52px 0;
+    background: #fff;
+    box-shadow: 0px 0px 50px 2px #34481C26;
+    position: relative;
+    z-index: 2;
+    max-width: 966px;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.reqquote__gb {
+    padding: 0 52px;
+    margin-bottom: 60px;
+}
+
+.reqquote__form-title {
+    color: #3A2C2A;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 56px;
+    margin-bottom: 32px;
+    position: relative;
+
+    i {
+        font-style: normal;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $main-red;
+        color: #F5F5F5;
+        font-size: 20px;
+        font-weight: 700;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.qrinputfield {
+    margin-bottom: 16px;
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #3A2C2A;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        height: 53px;
+        border-radius: 5px;
+        padding: 0 12px;
+        font-size: 14px;
+        border: 1px solid #CECBCB;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        outline: none;
+
+        &:focus {
+            border-color: #51801A;
+        }
+    }
+
+    textarea {
+        resize: none;
+        height: 100px;
+        padding-top: 10px;
+    }
+}
+
+.reqquote__areas-header {
+    margin-bottom: 9px;
+    padding: 13px 0;
+    background: rgba(#51801A, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+        color: $main-green;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+}
+
+.reqquote__item {
+    width: 100%;
+    max-width: 13%;
+    flex: 0 0 13%;
+    padding-left: 60px;
+    padding-right: 16px;
+
+    span {
+        color: #000;
+        font-weight: 700;
+    }
+}
+
+.reqquote__manufacturer {
+    width: 100%;
+    max-width: 21%;
+    flex: 0 0 21%;
+    padding-right: 16px;
+}
+
+.reqquote__model {
+    width: 100%;
+    max-width: 15%;
+    flex: 0 0 15%;
+    padding-right: 16px;
+}
+
+.reqquote__descr {
+    width: 100%;
+    max-width: 21%;
+    flex: 0 0 21%;
+    padding-right: 16px;
+}
+
+.reqquote__finish {
+    width: 100%;
+    max-width: 17%;
+    flex: 0 0 17%;
+    padding-right: 16px;
+}
+
+.reqquote__qty {
+    width: 100%;
+    max-width: 13%;
+    flex: 0 0 13%;
+    padding-right: 16px;
+}
+
+.reqquote__area {
+    display: flex;
+    margin-bottom: 8px;
+
+    .reqquote__item {
+        height: 53px;
+        display: flex;
+        align-items: center;
+        background: rgba(#51801A, 0.1);
+    }
+
+    input {
+        width: 100%;
+        height: 53px;
+        border-radius: 5px;
+        padding: 0 12px;
+        font-size: 14px;
+        border: 1px solid #CECBCB;
+        transition: 0.3s;
+
+        &:focus {
+            border-color: #51801A;
+        }
+    }
+
+    .selectwrapper {
+        max-width: 65px;
+    }
+}
+
+.areas-add {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 143px;
+    max-width: 143px;
+    height: 49px;
+    background: $main-green;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: 0.3s;
+
+    &:hover {
+        background: $main-red;
+    }
+}
+
+.reqquote__areas {
+    margin-bottom: 60px;
+
+    .reqquote__form-title {
+        margin-left: 52px;
+    }
+}
+
+.reqquote__step {
+    padding: 0 52px;
+}
+
+.reqquote__step {
+    margin-bottom: 60px;
+}
+
+.securitycode {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .imgwrap {
+        width: 100%;
+        max-width: 120px;
+        flex: 0 0 120px;
+        margin-right: 12px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    input {
+        width: 100%;
+        max-width: 168px;
+        flex: 0 0 168px;
+        padding-left: 12px;
+        width: 100%;
+        height: 53px;
+        border-radius: 5px;
+        padding: 0 12px;
+        font-size: 14px;
+        border: 1px solid #CECBCB;
+        transition: 0.3s;
+
+        &:focus {
+            border-color: $main-green;
+        }
+    }
+}
+
+.reqquote__btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 52px;
+
+    .greenbtn {
+        border: none;
+        height: 49px;
+        width: 198px;
+    }
+
+    .border-btn {
+        width: 164px;
+        height: 49px;
+        margin-right: 12px;
+    }
+}
+
+@media(max-width:991.8px) {
+    .scrollsect {
+        overflow: scroll;
+    }
+
+
+    .reqquote__areas-header,
+    .reqquote__areas-body {
+        width: 900px;
+    }
+}
+
+@media(max-width:757.8px) {
+    .reqquote__header {
+        padding-top: 50px;
+        margin-bottom: 40px;
+    }
+
+    .reqquote__header h1 {
+        margin-bottom: 15px;
+    }
+
+    .reqquote__header h6 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .reqquote__formwrapper {
+        padding: 30px 0;
+    }
+
+    .reqquote__gb {
+        padding: 0 15px;
+    }
+
+    .reqquote__form-title {
+        padding-left: 40px;
+
+        i {
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
+        }
+    }
+
+    .qrinputfield {
+        margin-bottom: 8px;
+    }
+
+    .reqquote__areas .reqquote__form-title {
+        margin-left: 15px;
+    }
+
+    .reqquote__areas-header p {
+        font-size: 16px;
+    }
+
+    .reqquote__item {
+        padding-left: 30px;
+        max-width: 10%;
+        flex: 0 0 10%;
+    }
+
+    .reqquote__model {
+        max-width: 18%;
+        flex: 0 0 18%;
+    }
+
+    .reqquote__step {
+        padding: 0 15px;
+        margin-bottom: 40px;
+    }
+
+    .reqquote__btns .border-btn,
+    .reqquote__btns .greenbtn {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin: 0;
+    }
+
+    .reqquote__btns .border-btn {
+        margin-bottom: 10px;
+    }
+
+    .reqquote__btns {
+        padding: 0 15px;
+    }
+
+    .reqquote__form-title {
+        margin-bottom: 24px;
+    }
+
+    .reqquote__areas,
+    .reqquote__gb {
+        margin-bottom: 40px;
+    }
+}

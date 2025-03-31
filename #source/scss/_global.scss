@@ -25,6 +25,7 @@ main.main {
     position: relative;
     z-index: 2;
     background: #fff;
+    overflow: hidden;
 
     &>section,
     &>div {
