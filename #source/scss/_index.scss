@@ -11,9 +11,9 @@
 
     .imgwrap {
         height: 100%;
-        width: calc(100% + 110px);
+        width: calc(100% + 150px);
         height: 340px;
-        margin-left: -110px;
+        margin-left: -150px;
 
         img {
             width: 100%;
@@ -411,7 +411,10 @@
         left: 25px;
     }
 
-
+    .mainbnr .imgwrap {
+        width: calc(100% + 120px);
+        margin-left: -120px;
+    }
 
 
 
