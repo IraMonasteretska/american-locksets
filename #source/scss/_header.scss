@@ -671,10 +671,106 @@ header.header nav {
     height: 100%;
 }
 
-.header__nav li.dropdlink > a:hover,
+.header__nav li.dropdlink>a:hover,
 .cmlist-item ul li a:hover,
 .brand-menu ul li a:hover {
     color: #51801A;
+}
+
+
+
+.header__search input {
+    position: relative;
+    z-index: 1;
+}
+
+.header__search button {
+    z-index: 2;
+}
+
+.search-dropdown {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    top: 40px;
+    padding: 10px;
+    border: 1px solid #CECBCB;
+    border-radius: 4px;
+    display: none;
+    overflow: auto;
+    height: 280px;
+    max-height: calc(100vh - 200px);
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+       background: rgba(#51801A, 0.1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #51801A;
+        border-radius: 10px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            min-height: 56px;
+
+            .imgwrap {
+                width: 100%;
+                max-width: 56px;
+                flex: 0 0 56px;
+                height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            p {
+                margin: 0;
+                width: 100%;
+                max-width: calc(100% - 56px);
+                flex: 0 0 calc(100% - 56px);
+                padding-left: 24px;
+                padding-right: 5px;
+                color: #7A6E6D;
+                font-size: 14px;
+                line-height: 150%;
+            }
+
+            &:hover {
+                background: rgba(#51801A, 0.1);
+
+                p {
+                    color: #51801A;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -1039,6 +1135,11 @@ header.header nav {
             top: 20px;
             right: 20px;
         }
+    }
+
+    .search-dropdown {
+        top: 81px;
+        border-radius: 0;
     }
 }
 
