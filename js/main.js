@@ -56,11 +56,12 @@ $(document).ready(function () {
     var swiper = new Swiper(".fliptext", {
         direction: "vertical",
         loop: true,
-
+        simulateTouch: false,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
             speed: 500,
+
         },
     });
 
