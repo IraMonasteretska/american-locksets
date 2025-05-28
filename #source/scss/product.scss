@@ -50,7 +50,7 @@
     margin-bottom: 20px;
 
     .imgwrap {
-        max-height: 418px;
+        height: 418px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -202,7 +202,7 @@
 
 .product-info {
     h1 {
-        color: $main-red;
+        color: #000;
         font-size: 26px;
         font-weight: 800;
         margin-bottom: 16px;
@@ -1466,6 +1466,11 @@
     }
 }
 
+.savedinfo {
+    color: #51801A;
+    font-weight: 600;
+    font-size: 14px;
+}
 
 
 
@@ -1599,6 +1604,10 @@
 
     .noreviews {
         padding-top: 50px;
+    }
+
+    .savedinfo {
+        margin-top: 10px;
     }
 
 }
