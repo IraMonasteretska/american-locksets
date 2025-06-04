@@ -173,9 +173,11 @@
                 color: #2A2E3A;
                 cursor: pointer;
                 transition: 0.3s;
+                border: 1px solid #E9E9E9;
 
                 &:hover {
-                    background: #d4d4d4;
+                    background: #fff;
+                    border: 1px solid #51801A;
                 }
             }
         }
@@ -303,7 +305,7 @@
 
             span {
                 font-weight: 700;
-                    word-wrap: break-word;
+                word-wrap: break-word;
             }
         }
     }

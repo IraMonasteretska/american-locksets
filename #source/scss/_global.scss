@@ -10,7 +10,7 @@ $main-red: #82252F;
 body {
     font-family: "Manrope", sans-serif;
     position: relative;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 input {
@@ -21,11 +21,15 @@ a {
     text-decoration: none;
 }
 
+label {
+    cursor: pointer;
+}
+
 main.main {
     position: relative;
     z-index: 2;
     background: #fff;
-    overflow: hidden;
+    // overflow: hidden;
 
     &>section,
     &>div {

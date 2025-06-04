@@ -32,8 +32,6 @@ $(document).ready(function () {
                 $('.overlay').removeClass('show');
             }
         }
-
-
     });
 
     // menu tabs
@@ -132,14 +130,6 @@ $(document).ready(function () {
             minimumResultsForSearch: Infinity,
             dropdownParent: $('.selectwrapper')
         });
-
-        // $('.styledselectmodal').select2({
-        //     placeholder: "",
-        //     minimumResultsForSearch: Infinity,
-        //     dropdownParent: $('.modal')
-        // });
-
-
     }
 
 
@@ -399,4 +389,53 @@ $(document).ready(function () {
         return false;
     });
 
+    // checkout page
+
+    document.querySelectorAll('input[type="radio"][name="payment"]').forEach(radio => {
+        radio.addEventListener('change', function () {
+            document.querySelectorAll('input[type="radio"][name="payment"]').forEach(r => {
+                const box = r.closest('.ps-row');
+                if (box) box.classList.remove('active');
+            });
+
+            const selectedBox = this.closest('.ps-row');
+            if (selectedBox) selectedBox.classList.add('active');
+        });
+    });
+
+
+    // card number
+    const input1 = document.getElementById('cardnum');
+
+    input1.addEventListener('input', function (e) {
+        let value = e.target.value;
+        value = value.replace(/\D/g, '');
+        value = value.slice(0, 16);
+
+        let formatted = '';
+        for (let i = 0; i < value.length; i++) {
+            if (i > 0 && i % 4 === 0) {
+                formatted += ' ';
+            }
+            formatted += value[i];
+        }
+
+        e.target.value = formatted;
+    });
+
+    // card date
+    const expiryInput = document.getElementById('expiry-input');
+
+    expiryInput.addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, ''); // залишаємо лише цифри
+
+        if (value.length > 4) value = value.slice(0, 4); // максимум 4 цифри
+
+        // Автоматично вставляємо слеш після перших двох цифр
+        if (value.length > 2) {
+            value = value.slice(0, 2) + '/' + value.slice(2);
+        }
+
+        e.target.value = value;
+    });
 })
