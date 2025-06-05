@@ -32,6 +32,8 @@ $(document).ready(function () {
                 $('.overlay').removeClass('show');
             }
         }
+
+
     });
 
     // menu tabs
@@ -389,8 +391,7 @@ $(document).ready(function () {
         return false;
     });
 
-    // checkout page
-
+    // CHECKOUT PAGE
     document.querySelectorAll('input[type="radio"][name="payment"]').forEach(radio => {
         radio.addEventListener('change', function () {
             document.querySelectorAll('input[type="radio"][name="payment"]').forEach(r => {
@@ -403,39 +404,95 @@ $(document).ready(function () {
         });
     });
 
-
     // card number
     const input1 = document.getElementById('cardnum');
+    if (input1) {
+        input1.addEventListener('input', function (e) {
+            let value = e.target.value;
+            value = value.replace(/\D/g, '');
+            value = value.slice(0, 16);
 
-    input1.addEventListener('input', function (e) {
-        let value = e.target.value;
-        value = value.replace(/\D/g, '');
-        value = value.slice(0, 16);
-
-        let formatted = '';
-        for (let i = 0; i < value.length; i++) {
-            if (i > 0 && i % 4 === 0) {
-                formatted += ' ';
+            let formatted = '';
+            for (let i = 0; i < value.length; i++) {
+                if (i > 0 && i % 4 === 0) {
+                    formatted += ' ';
+                }
+                formatted += value[i];
             }
-            formatted += value[i];
-        }
 
-        e.target.value = formatted;
-    });
+            e.target.value = formatted;
+        });
+    }
 
     // card date
     const expiryInput = document.getElementById('expiry-input');
+    if (expiryInput) {
+        expiryInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, ''); // залишаємо лише цифри
 
-    expiryInput.addEventListener('input', function (e) {
-        let value = e.target.value.replace(/\D/g, ''); // залишаємо лише цифри
+            if (value.length > 4) value = value.slice(0, 4); // максимум 4 цифри
 
-        if (value.length > 4) value = value.slice(0, 4); // максимум 4 цифри
+            // Автоматично вставляємо слеш після перших двох цифр
+            if (value.length > 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2);
+            }
 
-        // Автоматично вставляємо слеш після перших двох цифр
-        if (value.length > 2) {
-            value = value.slice(0, 2) + '/' + value.slice(2);
-        }
+            e.target.value = value;
+        });
+    }
 
-        e.target.value = value;
+    // saved adress
+
+    const addressRadios = document.querySelectorAll('input[name="adress"]');
+    const chooseAdr = document.querySelector('.chooseadr');
+
+    addressRadios.forEach(function (radio) {
+        radio.addEventListener('change', function () {
+            if (document.getElementById('adress2').checked) {
+                chooseAdr.classList.remove('hide');
+            } else {
+                chooseAdr.classList.add('hide');
+            }
+        });
     });
+
+    // steps
+    document.querySelectorAll('.checkoutsect').forEach((section, index) => {
+        if (index < 2) {
+            section.classList.add('reached');
+        }
+    });
+
+    const continueButtons = document.querySelectorAll('.checkout-continue');
+
+    continueButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const currentSection = button.closest('.checkoutsect');
+            const allSections = document.querySelectorAll('.checkoutsect');
+            let showNext = false;
+
+            allSections.forEach(function (section) {
+                section.classList.add('hide');
+
+                if (section === currentSection) {
+                    showNext = true;
+                } else if (showNext) {
+                    section.classList.remove('hide');
+                    section.classList.add('reached'); 
+                    showNext = false;
+                }
+            });
+        });
+    });
+
+  
+    $('.togglebtn button').click(function (e) {
+        e.preventDefault();
+        const section = $(this).closest('.checkoutsect');
+
+        if (section.hasClass('reached')) {
+            section.toggleClass('hide');
+        }
+    });
+
 })

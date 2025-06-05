@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product page</title>
     <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
+
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/lib/select2.css">
@@ -1427,11 +1428,26 @@
                         <form action="#">
                             <div class="checkoutsect">
                                 <div class="checkoutsect__header">
-                                    <p class="title">Your Order</p>
+                                    <div class="checkoutsect__header-titlebox">
+                                        <p class="title">Your Order</p>
+                                        <div class="shortinfo">
+                                            <div class="products-imgs">
+                                                <div class="imgwrap">
+                                                    <img src="img/checkout/product1.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/checkout/product1.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/checkout/product1.png" alt="img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="togglebtn">
-                                        <button>
-                                            <span>Hide</span>
-                                            <span>Show</span>
+                                        <button type="button">
+                                            <span class="hidebox">Hide</span>
+                                            <span class="editbox">Edit</span>
                                         </button>
                                     </div>
                                 </div>
@@ -1587,29 +1603,36 @@
 
                             <div class="checkoutsect">
                                 <div class="checkoutsect__header">
-                                    <p class="title">1. Shipping Information</p>
+                                    <div class="checkoutsect__header-titlebox">
+                                        <p class="title">1. Shipping Information</p>
+                                        <div class="shortinfo">
+                                            <p>
+                                                John Smith IL 62704, 123 Maplewood Lane, Springfield,United States
+                                            </p>
+                                        </div>
+                                    </div>
                                     <div class="togglebtn">
-                                        <button>
-                                            <span>Hide</span>
-                                            <span>Show</span>
+                                        <button type="button">
+                                            <span class="hidebox">Hide</span>
+                                            <span class="editbox">Edit</span>
                                         </button>
                                     </div>
                                 </div>
                                 <div class="checkoutsect__body">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-md-6">
                                             <div class="inputfield">
                                                 <label for="fname">First Name<i>*</i></label>
                                                 <input type="text" placeholder="John" id="fname">
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-md-6">
                                             <div class="inputfield">
                                                 <label for="lname">Last Name<i>*</i></label>
                                                 <input type="text" placeholder="Smith" id="lname">
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-md-6">
                                             <div class="inputfield selectwrapper">
                                                 <label for="city">City<i>*</i></label>
                                                 <select name="" id="city" class="styledselect"
@@ -1620,19 +1643,19 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-md-6">
                                             <div class="inputfield">
                                                 <label for="zipcode">Zip Code: </label>
                                                 <input type="text" placeholder="12345" id="zipcode">
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-md-6">
                                             <div class="inputfield">
                                                 <label for="company">Company Name:</label>
                                                 <input type="text" placeholder="Company Name" id="company">
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-md-6">
                                             <div class="inputfield selectwrapper">
                                                 <label for="country">Country<i>*</i></label>
                                                 <select name="" id="country" class="styledselect"
@@ -1643,7 +1666,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-md-6">
                                             <div class="inputfield">
                                                 <label for="address">Street Address<i>*</i></label>
                                                 <input type="text"
@@ -1651,7 +1674,7 @@
                                                     id="address">
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-md-6">
                                             <div class="inputfield selectwrapper">
                                                 <label for="state">State/Province<i>*</i></label>
                                                 <select name="" id="state" class="styledselect"
@@ -1674,16 +1697,64 @@
                                         </div>
                                     </div>
 
+                                    <div class="chooseadr hide">
+                                        <p class="checkoutsect__title">
+                                            Choose adress
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-xl-4 col-md-6">
+                                                <div class="savedadr">
+                                                    <input type="radio" name="savedadr" id="saveadr1">
+                                                    <label for="saveadr1">
+                                                        <img class="statusadr" src="img/checkout/check.svg" alt="check">
+                                                        <p><b>CHECK O MATIC</b></p>
+                                                        <p><b>Moshe Neuman</b></p>
+                                                        <p>
+                                                            11 Fillmore Ct Unit 313
+                                                            Monroe NY 10950-3752
+                                                        </p>
+                                                        <p>United States</p>
+                                                        <p>New York</p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-6">
+                                                <div class="savedadr">
+                                                    <input type="radio" name="savedadr" id="saveadr2">
+                                                    <label for="saveadr2">
+                                                        <img class="statusadr" src="img/checkout/check.svg" alt="check">
+                                                        <p><b>Moshe Fried</b></p>
+                                                        <p>
+                                                            305 FOREST RD MONROE NY 10950
+                                                        </p>
+                                                        <p>United States</p>
+                                                        <p>New York</p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="checkout-continue">Continue checkout</button>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="checkoutsect">
+                            <div class="checkoutsect hide">
                                 <div class="checkoutsect__header">
-                                    <p class="title">2. Shipping Method</p>
+                                    <div class="checkoutsect__header-titlebox">
+                                        <p class="title">2. Shipping Method</p>
+                                        <div class="shortinfo">
+                                            <p>
+                                                Shipping Rate 
+                                            </p>
+                                        </div>
+                                    </div>
                                     <div class="togglebtn">
-                                        <button>
-                                            <span>Hide</span>
-                                            <span>Show</span>
+                                        <button type="button">
+                                            <span class="hidebox">Hide</span>
+                                            <span class="editbox">Edit</span>
                                         </button>
                                     </div>
                                 </div>
@@ -1716,18 +1787,26 @@
                                         <textarea id="comment"></textarea>
                                     </div>
                                     <div class="text-center">
-                                        <button class="checkout-continue">Continue checkout</button>
+                                        <button type="button" class="checkout-continue">Continue checkout</button>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="checkoutsect">
+                            <div class="checkoutsect hide">
                                 <div class="checkoutsect__header">
-                                    <p class="title">3. Payment Method</p>
+                                    <div class="checkoutsect__header-titlebox">
+                                        <p class="title">3. Payment Method</p>
+                                        <div class="shortinfo">
+                                            <p>
+                                                <img src="img/checkout/credit-card2.svg" alt="img">
+                                                Credit Card
+                                            </p>
+                                        </div>
+                                    </div>
                                     <div class="togglebtn">
-                                        <button>
-                                            <span>Hide</span>
-                                            <span>Show</span>
+                                        <button type="button">
+                                            <span class="hidebox">Hide</span>
+                                            <span class="editbox">Edit</span>
                                         </button>
                                     </div>
                                 </div>
@@ -1785,14 +1864,14 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-6">
+                                                            <div class="col-lg-6 col-md-6">
                                                                 <div class="inputfield">
                                                                     <label for="cardholder">Card Holder</label>
                                                                     <input type="text" id="cardholder"
                                                                         placeholder="John Smith">
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-4">
+                                                            <div class="col-lg-4 col-md-3">
                                                                 <div class="inputfield">
                                                                     <label for="expiry-input">Exp. Date </label>
                                                                     <input type="text" id="expiry-input"
@@ -1800,7 +1879,7 @@
                                                                         maxlength="5">
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-2">
+                                                            <div class="col-lg-2 col-md-3">
                                                                 <div class="inputfield">
                                                                     <label for="cvc">CVC</label>
                                                                     <input type="password" id="cvc" placeholder="***"
@@ -1814,17 +1893,82 @@
                                         </div>
 
                                         <div class="inputfield inputfield_textarea">
-                                            <label for="comment">Comments About Shipping</label>
-                                            <textarea id="comment"></textarea>
+                                            <label for="comment-shipping">Comments About Shipping</label>
+                                            <textarea id="comment-shipping"></textarea>
                                         </div>
                                         <div class="text-center">
-                                            <button class="checkout-continue">Continue checkout</button>
+                                            <button type="button" class="checkout-continue">Continue checkout</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            
+                            <div class="checkoutsect hide">
+                                <div class="checkoutsect__header">
+                                    <div class="checkoutsect__header-titlebox">
+                                        <p class="title">4. Order Review</p>
+                                        <div class="shortinfo">
+                                            <p>
+                                                John Smith IL 62704, 123 Maplewood Lane, Springfield,United States,
+                                                1234XXXXXXXX5678, October, 24
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="togglebtn">
+                                        <button type="button">
+                                            <span class="hidebox">Hide</span>
+                                            <span class="editbox">Edit</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="checkoutsect__body">
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <p class="checkoutsect__title">
+                                                Please select the Payment Method
+                                            </p>
+                                            <div class="paystepinfo">
+                                                <p class="title">Delivery Address <a href="#">Edit</a></p>
+                                                <ul>
+                                                    <li>John Smith</li>
+                                                    <li>IL 62704</li>
+                                                    <li>123 Maplewood Lane</li>
+                                                    <li>Springfield</li>
+                                                    <li>United States</li>
+                                                </ul>
+                                                <p class="title">Shipping Method <a href="#">Edit</a></p>
+                                                <p>(Shipping Rate)</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="checkoutsect__title">
+                                                Payment Method
+                                            </p>
+                                            <div class="paystepinfo">
+                                                <p class="title">Credit Card <a href="#">Edit</a></p>
+                                                <ul class="fields-info">
+                                                    <li>
+                                                        <span class="fieldname">Credit Card Owner:</span>
+                                                        <span class="fielddescr">John Smith</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="fieldname">Credit Card Number:</span>
+                                                        <span class="fielddescr">1234XXXXXXXX5678</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="fieldname">Card Security Code:</span>
+                                                        <span class="fielddescr">---</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="fieldname">Credit Card Expiry Date:</span>
+                                                        <span class="fielddescr">October, 24</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <div class="col-xl-4 col-lg-5">
@@ -1873,7 +2017,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer class="footer">
