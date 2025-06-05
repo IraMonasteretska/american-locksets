@@ -478,14 +478,14 @@ $(document).ready(function () {
                     showNext = true;
                 } else if (showNext) {
                     section.classList.remove('hide');
-                    section.classList.add('reached'); 
+                    section.classList.add('reached');
                     showNext = false;
                 }
             });
         });
     });
 
-  
+
     $('.togglebtn button').click(function (e) {
         e.preventDefault();
         const section = $(this).closest('.checkoutsect');
@@ -494,5 +494,36 @@ $(document).ready(function () {
             section.toggleClass('hide');
         }
     });
+
+   
+
+   const allSections = document.querySelectorAll('.checkoutsect');
+
+    function openSectionById(id, skipSection = null) {
+        allSections.forEach(section => {
+            if (section !== skipSection) {
+                section.classList.add('hide');
+            }
+        });
+
+        const target = document.getElementById(id);
+        if (target) {
+            target.classList.remove('hide');
+            // Прокрутка плавно до відкритої секції
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    const editLinks = document.querySelectorAll('[data-target]');
+
+    editLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.dataset.target;
+            const parentSection = this.closest('.checkoutsect');
+            openSectionById(targetId, parentSection);
+        });
+    });
+
 
 })

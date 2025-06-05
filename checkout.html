@@ -1601,7 +1601,7 @@
                                 </div>
                             </div>
 
-                            <div class="checkoutsect">
+                            <div class="checkoutsect" id="delivery">
                                 <div class="checkoutsect__header">
                                     <div class="checkoutsect__header-titlebox">
                                         <p class="title">1. Shipping Information</p>
@@ -1741,7 +1741,7 @@
                                 </div>
                             </div>
 
-                            <div class="checkoutsect hide">
+                            <div class="checkoutsect hide" id="shipping">
                                 <div class="checkoutsect__header">
                                     <div class="checkoutsect__header-titlebox">
                                         <p class="title">2. Shipping Method</p>
@@ -1792,7 +1792,7 @@
                                 </div>
                             </div>
 
-                            <div class="checkoutsect hide">
+                            <div class="checkoutsect hide" id="payment">
                                 <div class="checkoutsect__header">
                                     <div class="checkoutsect__header-titlebox">
                                         <p class="title">3. Payment Method</p>
@@ -1928,7 +1928,7 @@
                                                 Please select the Payment Method
                                             </p>
                                             <div class="paystepinfo">
-                                                <p class="title">Delivery Address <a href="#">Edit</a></p>
+                                                <p class="title">Delivery Address <a href="#" data-target="delivery">Edit</a></p>
                                                 <ul>
                                                     <li>John Smith</li>
                                                     <li>IL 62704</li>
@@ -1936,7 +1936,7 @@
                                                     <li>Springfield</li>
                                                     <li>United States</li>
                                                 </ul>
-                                                <p class="title">Shipping Method <a href="#">Edit</a></p>
+                                                <p class="title">Shipping Method <a href="#" data-target="shipping">Edit</a></p>
                                                 <p>(Shipping Rate)</p>
                                             </div>
                                         </div>
@@ -1945,7 +1945,7 @@
                                                 Payment Method
                                             </p>
                                             <div class="paystepinfo">
-                                                <p class="title">Credit Card <a href="#">Edit</a></p>
+                                                <p class="title">Credit Card <a href="#" data-target="payment">Edit</a></p>
                                                 <ul class="fields-info">
                                                     <li>
                                                         <span class="fieldname">Credit Card Owner:</span>
@@ -1969,6 +1969,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                           
                         </form>
                     </div>
                     <div class="col-xl-4 col-lg-5">
