@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot password (Success)</title>
+    <title>Account - Personal address book</title>
     <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
 
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
@@ -1421,30 +1421,78 @@
             <div class="container">
                 <ul>
                     <li><a href="#">Locks & Hardware</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Password Forgotten</a></li>
-                    <li>Success</li>
+                    <li><a href="#">Account</a></li>
+                    <li>Address book</li>
                 </ul>
             </div>
         </div>
-        <div class="signsectwrapper text-center">
-            <div class="container">
-                <div class="signsectcontainer logoff">
-                    <img class="logoff-img" src="img/sign/forgotpass-success.svg" alt="img">
-                    <h1>
-                        New password was sent!
-                    </h1>
-                    <p>
-                        Check up your mail and login with a new password.
-                    </p>
-                    <a href="#" class="greenbtn">
-                        <img src="img/sign/cart-icon.svg" alt="icon">
-                        Sign In
-                    </a>
-                </div>
 
+        <div class="account-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="account-nav">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/account/icon-myacc.svg" alt="icon">
+                                        My account
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/account/icon-myorders.svg" alt="icon">
+                                        My orders
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <img src="img/account/icon-address.svg" alt="icon">
+                                        Address book
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/account/icon-pass.svg" alt="icon">
+                                        Change password
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/account/icon-logout.svg" alt="icon">
+                                        Log out
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <div class="account-content">
+                            <h3>Delivery Address</h3>
+                            <div class="acc-addresses">
+                                <div class="acc-addresses__box">
+                                    <input type="radio" name="accaddress" id="accaddress-1">
+                                    <label for="accaddress-1">
+                                        <p>11 Fillmore Ct Unit 313<br> Monroe NY 10950-3752</p>
+                                        <p><span>United States, New York</span></p>
+                                        <div class="acc-addresses__btns">
+                                            <a href="#" class="acc-addresses__edit">
+                                                <img src="img/account/edit.svg" alt="edit">
+                                            </a>
+                                            <button type="button" class="acc-addresses__delete">
+                                                <img src="img/account/delete.svg" alt="delete">
+                                            </button>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </main>
 
     <footer class="footer">

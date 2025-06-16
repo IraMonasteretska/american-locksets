@@ -21,6 +21,7 @@ $(document).ready(function () {
 
         $('.sbmenu').not($menu).removeClass('show');
         $('.header__nav li a').not($this).removeClass('active');
+        $('.account-menu').removeClass('show');
 
 
         if ($(window).width() > 1199) {
@@ -38,17 +39,14 @@ $(document).ready(function () {
 
     // menu tabs
     $('.categories-menu__leftcat li').click(function () {
-        let tabID = $(this).data('tab'); // Отримуємо значення data-tab
-        let menu = $(this).closest('.categories-menu'); // Знаходимо відповідне меню
+        let tabID = $(this).data('tab');
+        let menu = $(this).closest('.categories-menu');
 
-        // Знімаємо активний клас у всіх li та додаємо тільки обраному
         menu.find('.categories-menu__leftcat li').removeClass('active');
         $(this).addClass('active');
 
-        // Ховаємо всі вкладки в цьому меню
         menu.find('.categories-menu__tab').removeClass('active').hide();
 
-        // Показуємо тільки потрібний таб
         menu.find('.categories-menu__tab[data-tab="' + tabID + '"]').fadeIn(300).addClass('active');
     });
 
@@ -80,8 +78,10 @@ $(document).ready(function () {
     $('.burger').click(function () {
         $('.adaptmenu').toggleClass('show');
         $('.header__bottsect').toggleClass('open');
-        $('.overlay').toggleClass('show');
+        // $('.overlay').toggleClass('show');
         $('header.header nav').slideToggle();
+        $('.account-menu').removeClass('show');
+
     })
 
     $('.burger').click(function () {
@@ -90,9 +90,7 @@ $(document).ready(function () {
         window.scrollTo(0, 0);
     })
 
-    $('.searchbtn-mob').click(function () {
-        $('.header__search').fadeToggle();
-    });
+
 
     // // sign tabs
     // const tabs = $(".sign__tabs button");
@@ -428,11 +426,10 @@ $(document).ready(function () {
     const expiryInput = document.getElementById('expiry-input');
     if (expiryInput) {
         expiryInput.addEventListener('input', function (e) {
-            let value = e.target.value.replace(/\D/g, ''); // залишаємо лише цифри
+            let value = e.target.value.replace(/\D/g, '');
 
-            if (value.length > 4) value = value.slice(0, 4); // максимум 4 цифри
+            if (value.length > 4) value = value.slice(0, 4);
 
-            // Автоматично вставляємо слеш після перших двох цифр
             if (value.length > 2) {
                 value = value.slice(0, 2) + '/' + value.slice(2);
             }
@@ -495,9 +492,9 @@ $(document).ready(function () {
         }
     });
 
-   
 
-   const allSections = document.querySelectorAll('.checkoutsect');
+
+    const allSections = document.querySelectorAll('.checkoutsect');
 
     function openSectionById(id, skipSection = null) {
         allSections.forEach(section => {
@@ -509,7 +506,6 @@ $(document).ready(function () {
         const target = document.getElementById(id);
         if (target) {
             target.classList.remove('hide');
-            // Прокрутка плавно до відкритої секції
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
@@ -526,4 +522,105 @@ $(document).ready(function () {
     });
 
 
+
+
+
+    // header - account dropdown
+    $('.headerr__acc').click(function (e) {
+        e.preventDefault();
+        $('.account-menu').toggleClass('show');
+
+        if ($('.account-menu.show').length > 0) {
+            if (!$('.overlay').hasClass('show')) {
+                $('.overlay').addClass('show');
+            }
+        } else {
+            $('.overlay').removeClass('show');
+        }
+
+        $('.overlay').removeClass('burger-opened');
+        $('.sbmenu').removeClass('show');
+        $('.header__nav li a').removeClass('active');
+
+
+        if ($(window).width() < 1200) {
+            $('.header.header nav').slideUp();
+            $('.burger').removeClass('on');
+        }
+
+        if ($(window).width() < 768) {
+            $('.header__search').fadeOut();
+        }
+
+    })
+
+    $('.overlay').click(function () {
+        $(this).removeClass('show');
+        $('.account-menu').removeClass('show');
+        $('.sbmenu').removeClass('show');
+        $('.header__nav li a').removeClass('active');
+
+        if ($(window).width() < 1200) {
+            $('.header.header nav').slideUp();
+            $('.burger').removeClass('on');
+        }
+    })
+
+    $('.burger').click(function () {
+        const $overlay = $('.overlay');
+
+        if (!$overlay.hasClass('burger-opened')) {
+            $('.account-menu').removeClass('show');
+
+            $overlay.addClass('show burger-opened');
+        } else {
+            $overlay.removeClass('show burger-opened');
+        }
+
+        $('.header__search').fadeOut();
+    });
+
+    $('.searchbtn-mob').click(function () {
+        $('.header__search').fadeToggle();
+        $('.overlay').removeClass('show burger-opened');
+        $('.account-menu').removeClass('show');
+
+        if ($(window).width() < 768) {
+            $('.header.header nav').slideUp();
+            $('.burger').removeClass('on');
+        }
+
+    });
+
+    // Search results - slider
+    var swiper = new Swiper(".popularcat", {
+        // slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        speed: 700,
+        navigation: {
+            nextEl: ".popularcat-arrows .swiper-button-next",
+            prevEl: ".popularcat-arrows .swiper-button-prev",
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            450: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            },
+        },
+
+
+    });
+
 })
+
+

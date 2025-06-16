@@ -406,6 +406,7 @@
     .signsectcontainer {
         max-width: 720px;
         margin: 0 auto;
+
     }
 
     .succes-img {
@@ -445,6 +446,19 @@
         max-width: 227px;
         width: 100%;
         margin-top: 28px;
+    }
+
+    &.checkout-ty {
+        min-height: 395px;
+
+        p {
+            font-size: 18px;
+            color: #2A2E3A;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
@@ -519,6 +533,10 @@
         font-weight: 500;
         margin-bottom: 15px;
     }
+
+    .signsectwrapper.checkout-ty {
+        min-height: initial;
+    }
 }
 
 @media(max-width:575.8px) {
@@ -587,6 +605,10 @@
 
     .signbox.signbox__forgotpass .signnext {
         text-align: center;
+    }
+
+    .signsectwrapper.checkout-ty p {
+        font-size: 16px;
     }
 
 }
