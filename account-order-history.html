@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account - Personal address book</title>
+    <title>Account - Order History</title>
     <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
 
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
@@ -1422,7 +1422,7 @@
                 <ul>
                     <li><a href="#">Locks & Hardware</a></li>
                     <li><a href="#">Account</a></li>
-                    <li>Address book</li>
+                    <li>My orders</li>
                 </ul>
             </div>
         </div>
@@ -1439,13 +1439,13 @@
                                         My account
                                     </a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="#">
                                         <img src="img/account/icon-myorders.svg" alt="icon">
                                         My orders
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li>
                                     <a href="#">
                                         <img src="img/account/icon-address.svg" alt="icon">
                                         Address book
@@ -1469,50 +1469,231 @@
                     </div>
                     <div class="col-lg-9 col-md-8">
                         <div class="account-content">
-                            <h3>Delivery Address</h3>
-                            <div class="acc-addresses">
-                                <div class="acc-addresses__box">
-                                    <input type="radio" name="accaddress" id="accaddress-1" checked>
-                                    <label for="accaddress-1">
-                                        <p>11 Fillmore Ct Unit 313<br> Monroe NY 10950-3752</p>
-                                        <p><span>United States, New York</span></p>
-                                        <div class="acc-addresses__btns">
-                                            <a href="#" class="acc-addresses__edit">
-                                                <img src="img/account/edit.svg" alt="edit">
-                                            </a>
-                                            <button type="button" class="acc-addresses__delete">
-                                                <img src="img/account/delete.svg" alt="delete">
-                                            </button>
+                            <h3>My Order History</h3>
+                            <div class="orderhistory">
+                                <div class="orderhistory__header">
+                                    <div class="row g-0">
+                                        <div class="acc-ordernum">
+                                            <p>Order №</p>
                                         </div>
-                                    </label>
-                                </div>
-                                <div class="acc-addresses__box">
-                                    <input type="radio" name="accaddress" id="accaddress-2">
-                                    <label for="accaddress-2">
-                                        <p>305 FOREST RD<br> MONROE NY 10950</p>
-                                        <p><span>United States, New York</span></p>
-                                        <div class="acc-addresses__btns">
-                                            <a href="#" class="acc-addresses__edit">
-                                                <img src="img/account/edit.svg" alt="edit">
-                                            </a>
-                                            <button type="button" class="acc-addresses__delete">
-                                                <img src="img/account/delete.svg" alt="delete">
-                                            </button>
+                                        <div class="acc-ordersum">
+                                            <p>Total sum</p>
                                         </div>
-                                    </label>
+                                        <div class="acc-orderproducts">
+                                            <p>Products</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="#" class="acc-addaddress">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M21.1429 11.5714C21.1429 12.232 20.607 12.7678 19.9465 12.7678H3.1964C2.53558 12.7678 2 12.232 2 11.5714C2 10.9108 2.53558 10.375 3.1964 10.375H19.9462C20.607 10.375 21.1429 10.9108 21.1429 11.5714Z"
-                                            fill="#51801A" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M11.5733 21.1429C10.9128 21.1429 10.377 20.607 10.377 19.9465V3.1964C10.377 2.53558 10.9128 2 11.5733 2C12.2339 2 12.7697 2.53558 12.7697 3.1964V19.9462C12.7697 20.607 12.2339 21.1429 11.5733 21.1429Z"
-                                            fill="#51801A" />
-                                    </svg>
-                                    Add new address
-                                </a>
+                                <div class="orderhistory__body">
+                                    <div class="row g-0 orderhistory__row">
+                                        <div class="acc-ordernum">
+                                            <p>№1200000004525545 from 9.06.25 19.31</p>
+                                        </div>
+                                        <div class="acc-ordersum">
+                                            <p>$1149.06</p>
+                                        </div>
+                                        <div class="acc-orderproducts">
+                                            <div class="prodpics">
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist1.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist2.png" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="acchistmenu">
+                                                <button>
+                                                    <img src="img/account/dots.svg" alt="menu">
+                                                </button>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="img/account/info-icon.svg" alt="icon">
+                                                            Order Details
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row g-0 orderhistory__row">
+                                        <div class="acc-ordernum">
+                                            <p>№1200000092174 from 3.05.25 21.23</p>
+                                        </div>
+                                        <div class="acc-ordersum">
+                                            <p>$545.23</p>
+                                        </div>
+                                        <div class="acc-orderproducts">
+                                            <div class="prodpics">
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist3.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist2.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist1.png" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="acchistmenu">
+                                                <button>
+                                                    <img src="img/account/dots.svg" alt="menu">
+                                                </button>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="img/account/info-icon.svg" alt="icon">
+                                                            Order Details
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row g-0 orderhistory__row">
+                                        <div class="acc-ordernum">
+                                            <p>
+                                                №12000000045567 from 16.01.25 10.25
+                                                <span>
+                                                    <img src="img/account/history-check.svg" alt="img">
+                                                    Received
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="acc-ordersum">
+                                            <p>$1338.00</p>
+                                        </div>
+                                        <div class="acc-orderproducts">
+                                            <div class="prodpics">
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist4.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist3.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist3.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist2.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap morepr">
+                                                    <img src="img/account/order-hist1.png" alt="img">
+                                                    <span>
+                                                        +1 product
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="acchistmenu">
+                                                <button>
+                                                    <img src="img/account/dots.svg" alt="menu">
+                                                </button>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="img/account/info-icon.svg" alt="icon">
+                                                            Order Details
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row g-0 orderhistory__row">
+                                        <div class="acc-ordernum">
+                                            <p>№1200000004525545 from 9.06.25 19.31</p>
+                                        </div>
+                                        <div class="acc-ordersum">
+                                            <p>$1149.06</p>
+                                        </div>
+                                        <div class="acc-orderproducts">
+                                            <div class="prodpics">
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist1.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist1.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist2.png" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="acchistmenu">
+                                                <button>
+                                                    <img src="img/account/dots.svg" alt="menu">
+                                                </button>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="img/account/info-icon.svg" alt="icon">
+                                                            Order Details
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row g-0 orderhistory__row">
+                                        <div class="acc-ordernum">
+                                            <p>
+                                                №12000000045567 from 16.01.25 10.25
+                                                <span>
+                                                    <img src="img/account/history-check.svg" alt="img">
+                                                    Received
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="acc-ordersum">
+                                            <p>$1338.00</p>
+                                        </div>
+                                        <div class="acc-orderproducts">
+                                            <div class="prodpics">
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist4.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist3.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist3.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap">
+                                                    <img src="img/account/order-hist2.png" alt="img">
+                                                </div>
+                                                <div class="imgwrap morepr">
+                                                    <img src="img/account/order-hist1.png" alt="img">
+                                                    <span>
+                                                        +1 product
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="acchistmenu">
+                                                <button>
+                                                    <img src="img/account/dots.svg" alt="menu">
+                                                </button>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="img/account/info-icon.svg" alt="icon">
+                                                            Order Details
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="moreorders">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M20.1818 11.1818C19.9648 11.1818 19.7567 11.268 19.6033 11.4215C19.4498 11.5749 19.3636 11.783 19.3636 12C19.3636 13.4564 18.9318 14.8801 18.1226 16.091C17.3135 17.302 16.1635 18.2458 14.8179 18.8031C13.4724 19.3605 11.9918 19.5063 10.5634 19.2221C9.13502 18.938 7.82295 18.2367 6.79313 17.2069C5.7633 16.1771 5.06199 14.865 4.77786 13.4366C4.49373 12.0082 4.63955 10.5276 5.19689 9.18209C5.75423 7.83657 6.69804 6.68653 7.90899 5.8774C9.11993 5.06828 10.5436 4.63641 12 4.63641C13.268 4.63413 14.5145 4.96298 15.6164 5.59041L14.6943 6.51249C14.5799 6.62692 14.502 6.77269 14.4704 6.93138C14.4389 7.09006 14.4551 7.25455 14.517 7.40403C14.5789 7.55351 14.6837 7.68128 14.8183 7.77118C14.9528 7.86109 15.1109 7.90909 15.2727 7.90913H18.5455C18.7625 7.90913 18.9706 7.82293 19.124 7.66949C19.2774 7.51605 19.3636 7.30794 19.3636 7.09095V3.81823C19.3636 3.65643 19.3156 3.49828 19.2257 3.36376C19.1358 3.22925 19.008 3.12441 18.8585 3.06249C18.7091 3.00058 18.5446 2.98438 18.3859 3.01594C18.2272 3.04749 18.0814 3.12539 17.967 3.23978L16.8125 4.39095C15.3742 3.47704 13.7041 2.99436 12 3.00005C10.22 3.00005 8.47991 3.52789 6.99987 4.51682C5.51983 5.50575 4.36628 6.91135 3.68509 8.55588C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5017 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.7801 21 12C21 11.783 20.9138 11.5749 20.7604 11.4215C20.6069 11.268 20.3988 11.1818 20.1818 11.1818Z"
+                                                    fill="#51801A" />
+                                            </svg>
+                                            More orders
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1600,39 +1781,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="modal-deleteaddress">
-        <div class="d-flex">
-
-        
-        <div class="modal-deleteaddress__content">
-            <div class="modal-deleteaddress__header">
-                <img src="img/account/worning.svg" alt="icon">
-                <button class="modal-deleteaddress__close">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M6.66667 23.4485C6.146 23.9693 6.14608 24.8134 6.66683 25.3341C7.18757 25.8548 8.03179 25.8548 8.55244 25.334L15.9994 17.8857L23.447 25.3333C23.9677 25.854 24.812 25.854 25.3326 25.3333C25.8533 24.8126 25.8533 23.9684 25.3326 23.4477L17.8849 16L25.3321 8.55145C25.8526 8.03071 25.8526 7.18649 25.3318 6.66584C24.8112 6.14517 23.9669 6.14525 23.4462 6.666L15.9992 14.1144L8.55153 6.66664C8.03084 6.14595 7.18661 6.14595 6.66592 6.66664C6.14521 7.18735 6.14521 8.03156 6.66592 8.55227L14.1138 16.0001L6.66667 23.4485Z"
-                            fill="#6D717A" />
-                    </svg>
-                </button>
-            </div>
-            <div class="modal-deleteaddress__body">
-                <p>
-                    Are you sure you want to delete the delivery address?
-                </p>
-                <div class="row modal-deleteaddress__btns">
-                    <div class="col-6">
-                        <button class="closebtn" type="button">Close</button>
-                    </div>
-                    <div class="col-6">
-                        <button class="deletebtn" type="button">Delete</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-
-    </div>
 
     <div class="overlay"></div>
 </body>

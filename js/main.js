@@ -621,6 +621,28 @@ $(document).ready(function () {
 
     });
 
+    // account
+    document.body.addEventListener('click', function (e) {
+        if (e.target.closest('.acc-addresses__delete')) {
+            e.preventDefault();
+            document.querySelector('.modal-deleteaddress').classList.add('show');
+        }
+
+        if (e.target.closest('.modal-deleteaddress__close') || e.target.closest('.closebtn')) {
+            document.querySelector('.modal-deleteaddress').classList.remove('show');
+        }
+    });
+
+    // acc history - details
+    $('.acchistmenu button').click(function () {
+        $(this).next('ul').toggle();
+    })
+
+    // acc order details
+    $('.order-detailssect__header span').click(function(){
+        $(this).parents('.order-detailssect').toggleClass('rollup');
+    });
+
 })
 
 
