@@ -57,10 +57,14 @@ $(document).ready(function () {
     }
 
     function handleMenuClose() {
-        $('.sbmenu').removeClass('show');
-        $('.header__nav li a').removeClass('active');
-        $('.overlay').removeClass('show');
-    }
+    $('.sbmenu').removeClass('show');
+    $('.header__nav li a').removeClass('active');
+    $('.overlay').removeClass('show');
+
+    // Скидання активних вкладок у меню категорій
+    $('.categories-menu__leftcat li').removeClass('active');
+    $('.categories-menu__tab').removeClass('active').hide();
+}
 
     // CLICK — only mob
     $('.header__nav li.category a').on('click', function (e) {
@@ -90,6 +94,8 @@ $(document).ready(function () {
             handleMenuClose();
         }
     });
+
+
 
 
     // menu tabs
@@ -150,9 +156,9 @@ $(document).ready(function () {
     $('.burger').click(function () {
         $('.adaptmenu').toggleClass('show');
         $('.header__bottsect').toggleClass('open');
-        // $('.overlay').toggleClass('show');
         $('header.header nav').slideToggle();
         $('.account-menu').removeClass('show');
+         handleMenuClose();
 
     })
 

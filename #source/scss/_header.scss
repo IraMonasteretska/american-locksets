@@ -561,6 +561,21 @@ header.header nav {
                 color: #3A2C2A;
                 font-size: 14px;
                 font-weight: 500;
+                position: relative;
+                padding-left: 20px;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    border-radius: 50%;
+                    width: 6px;
+                    height: 6px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: $main-green;
+                }
             }
         }
     }
@@ -860,16 +875,6 @@ header.header nav {
     z-index: 2;
 }
 
-
-
-
-
-
-
-
-
-
-
 .categories-menu {
     background: transparent;
 
@@ -900,7 +905,9 @@ header.header nav {
 
 
 
-
+.categories-menu__rightlists .categories-menu__tab {
+    background: #e6f1fc;
+}
 
 @media(max-width:1499.8px) {
     .categories-menu {
