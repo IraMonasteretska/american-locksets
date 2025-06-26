@@ -909,6 +909,25 @@ header.header nav {
     background: #f8fff0;
 }
 
+.header__toprow p {
+    position: relative;
+    padding-left: 40px;
+}
+
+.header__flag {
+    max-height: 32px;
+    max-width: 32px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fliptext .swiper-slide p {
+    padding-left: 0;
+}
+
 @media(max-width:1499.8px) {
     .categories-menu {
         .container {
