@@ -339,9 +339,10 @@
     }
 }
 
- .col-xl-5ths {
-        margin-bottom: 22px;
-    }
+.col-xl-5ths,
+.category-itemwrap {
+    margin-bottom: 22px;
+}
 
 .category-section_ctpage {
     .row {

@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product page</title>
-    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/lib/select2.css">
+    <link rel="stylesheet" href="css/lib/fancybox.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -1442,14 +1443,14 @@
                             aria-selected="false">Related Categories</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="review-tab" data-bs-toggle="tab"
-                            data-bs-target="#review-tab-pane" type="button" role="tab" aria-controls="review-tab-pane"
+                        <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review-tab-pane"
+                            type="button" role="tab" aria-controls="review-tab-pane"
                             aria-selected="false">Reviews</button>
                     </li>
 
                 </ul>
 
-             
+
 
 
                 <div class="tab-content" id="myTabContent">
@@ -1461,12 +1462,19 @@
                                 <div class="col-xl-6 col-lg-6">
                                     <p class="mobtitle">Falcon W581LD, Grade 2 Storeroom Lock, Less Cylinder</p>
                                     <div class="product-sliders">
+
                                         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
                                             class="swiper mySwiper2 productmain-slider">
+
+
+                                            <button class="product__zoombtn">
+                                                <span class="zoom-icon"></span>
+                                            </button>
+
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <div class="imgwrap">
-                                                        <img src="img/product/slideimg3.png" alt="img">
+                                                        <img src="img/product/product-img4.png" alt="img">
                                                     </div>
                                                 </div>
                                                 <div class="swiper-slide">
@@ -1507,7 +1515,7 @@
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <div class="imgwrap">
-                                                           <img src="img/product/slideimg3.png" alt="img">
+                                                            <img src="img/product/slideimg3.png" alt="img">
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
@@ -2322,6 +2330,69 @@
                                                 </h5>
                                                 <p>Product code: W561BD</p>
                                             </div>
+
+                                            <div class="product-selectwrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Model <i>*</i></p>
+                                                </div>
+                                                <div class="selectwrapper">
+                                                    <select name="" id="" class="styledselect"
+                                                        data-placeholder="Please select">
+                                                        <option value=""></option>
+                                                        <option value="1">Lorem, ipsum</option>
+                                                        <option value="2">Lorem, ipsum</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="product-selectwrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Size <i>*</i></p>
+                                                </div>
+                                                <div class="selectwrapper">
+                                                    <select name="" id="" class="styledselect"
+                                                        data-placeholder="Please select">
+                                                        <option value=""></option>
+                                                        <option value="1">36"</option>
+                                                        <option value="2">40"</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="product-radiowrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Finish <i>*</i></p>
+                                                </div>
+                                                <div class="prradioswrapper">
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol1" id="ap-c1">
+                                                        <label for="ap-c1">
+                                                            <img src="img/product/color1.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol1" id="ap-c2">
+                                                        <label for="ap-c2">
+                                                            <img src="img/product/color2.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol1" id="ap-c3">
+                                                        <label for="ap-c3">
+                                                            <img src="img/product/color3.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol1" id="ap-c4">
+                                                        <label for="ap-c4">
+                                                            <img src="img/product/color4.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
                                         </div>
                                         <div class="addproductbox__bottom">
                                             <div class="addproductbox__price">
@@ -2401,6 +2472,69 @@
                                                 </h5>
                                                 <p>Product code: W561BD</p>
                                             </div>
+
+                                            <div class="product-selectwrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Model <i>*</i></p>
+                                                </div>
+                                                <div class="selectwrapper">
+                                                    <select name="" id="" class="styledselect"
+                                                        data-placeholder="Please select">
+                                                        <option value=""></option>
+                                                        <option value="1">Lorem, ipsum</option>
+                                                        <option value="2">Lorem, ipsum</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="product-selectwrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Size <i>*</i></p>
+                                                </div>
+                                                <div class="selectwrapper">
+                                                    <select name="" id="" class="styledselect"
+                                                        data-placeholder="Please select">
+                                                        <option value=""></option>
+                                                        <option value="1">36"</option>
+                                                        <option value="2">40"</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="product-radiowrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Finish <i>*</i></p>
+                                                </div>
+                                                <div class="prradioswrapper">
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol2" id="ap-c5">
+                                                        <label for="ap-c5">
+                                                            <img src="img/product/color1.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol2" id="ap-c6">
+                                                        <label for="ap-c6">
+                                                            <img src="img/product/color2.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol2" id="ap-c7">
+                                                        <label for="ap-c7">
+                                                            <img src="img/product/color3.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol2" id="ap-c8">
+                                                        <label for="ap-c8">
+                                                            <img src="img/product/color4.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
                                         </div>
                                         <div class="addproductbox__bottom">
                                             <div class="addproductbox__price">
@@ -2525,6 +2659,69 @@
                                                 </h5>
                                                 <p>Product code: W561BD</p>
                                             </div>
+
+                                            <div class="product-selectwrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Model <i>*</i></p>
+                                                </div>
+                                                <div class="selectwrapper">
+                                                    <select name="" id="" class="styledselect"
+                                                        data-placeholder="Please select">
+                                                        <option value=""></option>
+                                                        <option value="1">Lorem, ipsum</option>
+                                                        <option value="2">Lorem, ipsum</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="product-selectwrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Size <i>*</i></p>
+                                                </div>
+                                                <div class="selectwrapper">
+                                                    <select name="" id="" class="styledselect"
+                                                        data-placeholder="Please select">
+                                                        <option value=""></option>
+                                                        <option value="1">36"</option>
+                                                        <option value="2">40"</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="product-radiowrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Finish <i>*</i></p>
+                                                </div>
+                                                <div class="prradioswrapper">
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol3" id="ap-c9">
+                                                        <label for="ap-c9">
+                                                            <img src="img/product/color1.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol3" id="ap-c10">
+                                                        <label for="ap-c10">
+                                                            <img src="img/product/color2.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol3" id="ap-c11">
+                                                        <label for="ap-c11">
+                                                            <img src="img/product/color3.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol3" id="ap-c12">
+                                                        <label for="ap-c12">
+                                                            <img src="img/product/color4.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
                                         </div>
                                         <div class="addproductbox__bottom">
                                             <div class="addproductbox__price">
@@ -2739,6 +2936,64 @@
                                                     Falcon W581LD, Grade 2 Storeroom Lock, Less Cylinder
                                                 </h5>
                                                 <p>Product code: W561BD</p>
+                                            </div>
+
+                                            <div class="product-selectwrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Model <i>*</i></p>
+                                                </div>
+                                                <div class="selectwrapper">
+                                                    <select name="" id="" class="styledselect"
+                                                        data-placeholder="Please select">
+                                                        <option value=""></option>
+                                                        <option value="1">Lorem, ipsum</option>
+                                                        <option value="2">Lorem, ipsum</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="product-selectwrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Size <i>*</i></p>
+                                                </div>
+                                                <div class="selectwrapper">
+                                                    <select name="" id="" class="styledselect"
+                                                        data-placeholder="Please select">
+                                                        <option value=""></option>
+                                                        <option value="1">36"</option>
+                                                        <option value="2">40"</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="product-radiowrap">
+                                                <div class="product-selectwrap__header">
+                                                    <p>Finish <i>*</i></p>
+                                                </div>
+                                                <div class="prradioswrapper">
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol4" id="ap-c13">
+                                                        <label for="ap-c13">
+                                                            <img src="img/product/color1.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol4" id="ap-c14">
+                                                        <label for="ap-c14">
+                                                            <img src="img/product/color2.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol4" id="ap-c15">
+                                                        <label for="ap-c15">
+                                                            <img src="img/product/color3.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                    <div class="prradio-item">
+                                                        <input type="radio" name="apcol4" id="ap-c16">
+                                                        <label for="ap-c16">
+                                                            <img src="img/product/color4.png" alt="img">
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="addproductbox__bottom">
@@ -3371,6 +3626,7 @@
 <script src="js/lib/popper.js"></script>
 <script src="js/lib/bootstrap.min.js"></script>
 <script src="js/lib/select2.js"></script>
+<script src="js/lib/fancybox.js"></script>
 <script src="js/main.js"></script>
 
 </html>

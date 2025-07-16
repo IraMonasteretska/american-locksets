@@ -57,14 +57,14 @@ $(document).ready(function () {
     }
 
     function handleMenuClose() {
-    $('.sbmenu').removeClass('show');
-    $('.header__nav li a').removeClass('active');
-    $('.overlay').removeClass('show');
+        $('.sbmenu').removeClass('show');
+        $('.header__nav li a').removeClass('active');
+        $('.overlay').removeClass('show');
 
-    // Скидання активних вкладок у меню категорій
-    $('.categories-menu__leftcat li').removeClass('active');
-    $('.categories-menu__tab').removeClass('active').hide();
-}
+        // Скидання активних вкладок у меню категорій
+        $('.categories-menu__leftcat li').removeClass('active');
+        $('.categories-menu__tab').removeClass('active').hide();
+    }
 
     // CLICK — only mob
     $('.header__nav li.category a').on('click', function (e) {
@@ -122,7 +122,7 @@ $(document).ready(function () {
         }
     });
 
-   
+
 
 
 
@@ -158,7 +158,7 @@ $(document).ready(function () {
         $('.header__bottsect').toggleClass('open');
         $('header.header nav').slideToggle();
         $('.account-menu').removeClass('show');
-         handleMenuClose();
+        handleMenuClose();
 
     })
 
@@ -723,6 +723,49 @@ $(document).ready(function () {
     $('.order-detailssect__header span').click(function () {
         $(this).parents('.order-detailssect').toggleClass('rollup');
     });
+
+    // fancybox
+
+    if ($('[data-fancybox]').length) {
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+    }
+
+    // .productmain-slider
+    if ($('.product__zoombtn').length) {
+        document.querySelector('.product__zoombtn').addEventListener('click', function () {
+            const slider = document.querySelector('.productmain-slider');
+
+            if (!slider) return;
+
+            const slides = slider.querySelectorAll('.swiper-slide');
+            const gallery = [];
+            let activeIndex = 0;
+
+            slides.forEach((slide, index) => {
+                const img = slide.querySelector('img');
+                if (!img) return;
+
+                const src = img.getAttribute('data-zoom') || img.getAttribute('src');
+
+                gallery.push({
+                    src: src,
+                    type: 'image',
+                    thumb: src // можна окремий шлях для прев’ю, якщо є
+                });
+
+                if (slide.classList.contains('swiper-slide-active')) {
+                    activeIndex = index;
+                }
+            });
+
+            Fancybox.show(gallery, {
+                startIndex: activeIndex
+            });
+        });
+    }
+
 
 })
 

@@ -1428,7 +1428,7 @@
 }
 
 .review-ty {
-   
+
     .subtitle {
         text-align: left;
         font-size: 18px;
@@ -1472,8 +1472,34 @@
     font-size: 14px;
 }
 
+.product__zoombtn {
+    border: none;
+    padding: 0;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ECECED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background-image: url('../img/product/zoom.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    z-index: 3;
+}
 
-
+.addproductbox__top {
+    .product-selectwrap {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 
 
 
