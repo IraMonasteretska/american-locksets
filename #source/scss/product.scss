@@ -213,7 +213,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     .status {
         width: 100%;
@@ -1501,6 +1501,36 @@
     }
 }
 
+.productchat {
+    margin-bottom: 15px;
+
+    a {
+        color: #3A2C2A;
+        font-size: 16px;
+        font-weight: 600;
+        position: relative;
+        padding-left: 30px;
+        transition: 0.3s;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        span {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        &:hover {
+            span {
+                text-decoration: none;
+            }
+        }
+    }
+}
 
 
 @media(max-width:1599.8px) {

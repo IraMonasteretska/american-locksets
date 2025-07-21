@@ -317,36 +317,48 @@ header.header nav {
         padding: 0;
 
         li {
-            position: relative;
-            padding: 0 20px 0 28px;
-            font-weight: 600;
-            color: #3A2C2A;
-            font-size: 14px;
+            // position: relative;
+            // padding: 0 20px 0 28px;
+            // font-weight: 600;
+            // color: #3A2C2A;
+            // font-size: 14px;
             margin-bottom: 14px;
-            cursor: pointer;
-            transition: 0.3s;
+            // cursor: pointer;
+            // transition: 0.3s;
 
-            &:last-child {
-                margin-bottom: 0;
-            }
 
-            &:hover {
-                color: $main-green;
 
-                .cm-icon {
-                    svg path {
-                        fill: $main-green;
-                    }
+            a {
+                position: relative;
+                padding: 0 20px 0 28px;
+                font-weight: 600;
+                color: #3A2C2A;
+                font-size: 14px;
+                transition: 0.3s;
+                display: block;
 
-                    .strokesvg path {
-                        fill: #fff;
-                        stroke: $main-green;
-                    }
+                &:last-child {
+                    margin-bottom: 0;
                 }
 
-                .cm-arrow {
-                    svg path {
-                        fill: $main-green;
+                &:hover {
+                    color: $main-green;
+
+                    .cm-icon {
+                        svg path {
+                            fill: $main-green;
+                        }
+
+                        .strokesvg path {
+                            fill: #fff;
+                            stroke: $main-green;
+                        }
+                    }
+
+                    .cm-arrow {
+                        svg path {
+                            fill: $main-green;
+                        }
                     }
                 }
             }
@@ -407,6 +419,14 @@ header.header nav {
         color: #3A2C2A;
         font-size: 16px;
         font-weight: 700;
+
+        a {
+             color: #3A2C2A;
+
+             &:hover {
+                color: #82252F;
+             }
+        }
     }
 
     ul {
@@ -483,7 +503,7 @@ header.header nav {
     }
 }
 
-.categories-menu__leftcat li.active {
+.categories-menu__leftcat li.active a {
     color: $main-green;
 
     .cm-icon {
@@ -975,7 +995,9 @@ header.header nav {
     width: 26px;
 }
 
-
+.cmlist-item h6 a {
+    font-weight: 700;
+}
 
 
 
@@ -1263,7 +1285,9 @@ header.header nav {
         max-width: 100%;
     }
 
-
+.categories-menu__leftcat ul li a {
+    pointer-events: none;
+}
 
 
 
