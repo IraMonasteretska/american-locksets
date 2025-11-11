@@ -956,6 +956,86 @@
     }
 }
 
+.checkout__order {
+    position: relative;
+    top: 0;
+}
+
+.checkout-info {
+    padding: 32px;
+    border-radius: 10px;
+    border: 1px solid #9DA0A4;
+    margin-top: 40px;
+
+    p {
+        margin: 0;
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .title {
+        margin-bottom: 20px;
+        color: #2A2E3A;
+        font-size: 26px;
+        font-weight: 800;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0 0 20px 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            img {
+                max-height: 70px;
+            }
+        }
+    }
+
+}
+
+@media(max-width:1599.8px) {
+    .checkout-info {
+        padding: 20px;
+    }
+
+    .checkout-info {
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            li {
+                display: inline-flex;
+                align-items: center;
+                height: 40px;
+
+                img {
+                    max-height: 100%;
+                }
+            }
+        }
+
+        p br {
+            display: none;
+        }
+    }
+
+
+}
+
 @media(max-width:1399.8px) {
 
     .checkout__product .description {
@@ -988,6 +1068,27 @@
     .checksumm-row.total .price {
         font-size: 21px;
     }
+
+    .checkout-info ul {
+        margin-bottom: 15px;
+    }
+
+    .checkout-info .title {
+        font-size: 21px;
+    }
+
+    .checkout-info ul li {
+        height: 30px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    .checkout-info p {
+        font-weight: 500;
+    }
+
 
 }
 
@@ -1053,6 +1154,26 @@
 
     .payment-select__box .ps-row {
         padding: 20px 15px;
+    }
+
+    .checkout-info {
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            justify-content: flex-start;
+
+            li {
+                height: 60px;
+                display: inline-flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+        }
+
+
     }
 }
 
@@ -1171,6 +1292,25 @@
         vertical-align: middle;
     }
 
+    .checkout-info {
+        .title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            justify-content: flex-start;
+            margin-bottom: 10px;
+
+            li {
+                height: 35px;
+                margin-right: 10px;
+                margin-bottom: 5px;
+            }
+        }
+
+
+    }
 
 
     .paymentselect-leftbox .error-text {
@@ -1203,4 +1343,3 @@
         flex: 0 0 100%;
     }
 }
-
