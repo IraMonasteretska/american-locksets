@@ -766,6 +766,37 @@ $(document).ready(function () {
         });
     }
 
+    // brand slider
+     var swiper = new Swiper(".brandsslider", {
+        slidesPerView: 2,
+        spaceBetween: 0,
+        loop: true,
+        speed: 700,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            
+            991: {
+                slidesPerView: 5,
+            },
+            1400: {
+                slidesPerView: 6,
+            },
+        },
+    });
 
 })
 
