@@ -767,7 +767,7 @@ $(document).ready(function () {
     }
 
     // brand slider
-     var swiper = new Swiper(".brandsslider", {
+    var swiper = new Swiper(".brandsslider", {
         slidesPerView: 2,
         spaceBetween: 0,
         loop: true,
@@ -788,7 +788,7 @@ $(document).ready(function () {
             768: {
                 slidesPerView: 3,
             },
-            
+
             991: {
                 slidesPerView: 5,
             },
@@ -797,6 +797,22 @@ $(document).ready(function () {
             },
         },
     });
+
+    // discount
+    $('.discount__header').click(function () {
+        $(this).toggleClass('open');
+        $('.discount__body').slideToggle();
+    });
+
+    $('.code-submit').click(function () {
+        $('.discount__field').addClass('hide');
+        $('.dicount__status').removeClass('hide');
+    })
+
+    $('.dicount__status-close').click(function(){
+        $('.discount__field').removeClass('hide');
+        $('.dicount__status').addClass('hide');
+    })
 
 })
 
